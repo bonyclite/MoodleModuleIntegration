@@ -1,0 +1,6 @@
+E:\учёба нах\диплом\MoodleModulePrototypeComponents\Common\bin\Debug\Common.dll
+E:\учёба нах\диплом\MoodleModulePrototypeComponents\Common\bin\Debug\Common.pdb
+E:\учёба нах\диплом\MoodleModulePrototypeComponents\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\учёба нах\диплом\MoodleModulePrototypeComponents\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\учёба нах\диплом\MoodleModulePrototypeComponents\Common\obj\Debug\Common.dll
+E:\учёба нах\диплом\MoodleModulePrototypeComponents\Common\obj\Debug\Common.pdb
