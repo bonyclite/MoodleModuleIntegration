@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PersonnelSTU", "PersonnelST
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelSTU.Domain", "PersonnelSTU.Domain\PersonnelSTU.Domain.csproj", "{DFF09623-6E81-4FB8-9649-5A59AF4A3622}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelSTU.Data", "PersonnelSTU.Data\PersonnelSTU.Data.csproj", "{E6E1850A-082E-4CA7-BCE0-0D4881305629}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +25,17 @@ Global
 		{DFF09623-6E81-4FB8-9649-5A59AF4A3622}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFF09623-6E81-4FB8-9649-5A59AF4A3622}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFF09623-6E81-4FB8-9649-5A59AF4A3622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6E1850A-082E-4CA7-BCE0-0D4881305629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6E1850A-082E-4CA7-BCE0-0D4881305629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6E1850A-082E-4CA7-BCE0-0D4881305629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6E1850A-082E-4CA7-BCE0-0D4881305629}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DFF09623-6E81-4FB8-9649-5A59AF4A3622} = {B86FABFD-046D-4AB7-AA19-EDC5DE30C2CF}
+		{E6E1850A-082E-4CA7-BCE0-0D4881305629} = {B86FABFD-046D-4AB7-AA19-EDC5DE30C2CF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24984DED-B3A2-481F-B0FA-BDD229F64B73}
