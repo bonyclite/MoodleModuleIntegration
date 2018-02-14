@@ -16,7 +16,7 @@ namespace PersonnelSTU.FakeDBUtilAPI.Providers
 
         public IReadOnlyCollection<string> GetViews()
         {
-            throw new NotImplementedException();
+            return Enumerable.Empty<string>().ToArray();
         }
 
         public void CreateFakeDb(string dbName)

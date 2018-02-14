@@ -13,5 +13,7 @@ namespace PersonnelSTU.Data.Infrastructure
         public static string PersonnelSTUDbName => ConfigurationManager.AppSettings["PersonnelSTUDbName"];
 
         public static string FakePersonnelSTUDbConnectionString => ConfigurationManager.ConnectionStrings["FakePersonnelSTUDb"].ConnectionString;
+
+        public static string PersonnelSTUDbConnectionString => ConfigurationManager.ConnectionStrings["PersonnelSTUDb"].ConnectionString;
     }
 }
