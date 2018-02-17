@@ -53,13 +53,13 @@
     <Compile Include="Providers\FakeDbProvider.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\PersonnelSTU.Data\PersonnelSTU.Data.csproj">
       <Project>{e6e1850a-082e-4ca7-bce0-0d4881305629}</Project>
       <Name>PersonnelSTU.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
