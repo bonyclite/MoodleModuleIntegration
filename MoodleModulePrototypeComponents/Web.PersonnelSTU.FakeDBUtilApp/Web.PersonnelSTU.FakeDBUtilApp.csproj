@@ -51,6 +51,12 @@
     <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Mvc5.4.0.0\lib\net451\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
     </Reference>
@@ -88,6 +94,9 @@
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -137,9 +146,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App\AppStart.cs" />
+    <Compile Include="App\BundleConfig.cs" />
+    <Compile Include="App\FilterConfig.cs" />
+    <Compile Include="App\RouteConfig.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -241,6 +251,22 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{93086ed9-4e39-4e28-9c12-9bfb60258f16}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersonnelSTU.Data\PersonnelSTU.Data.csproj">
+      <Project>{e6e1850a-082e-4ca7-bce0-0d4881305629}</Project>
+      <Name>PersonnelSTU.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersonnelSTU.Domain\PersonnelSTU.Domain.csproj">
+      <Project>{dff09623-6e81-4fb8-9649-5a59af4a3622}</Project>
+      <Name>PersonnelSTU.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersonnelSTU.FakeDBUtilAPI\PersonnelSTU.FakeDBUtilAPI.csproj">
+      <Project>{4e0f6d37-5e5c-44d9-9169-598e1270877f}</Project>
+      <Name>PersonnelSTU.FakeDBUtilAPI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Web.Common\Web.Common.csproj">
       <Project>{c14d252b-c3cf-49d3-97c7-8192d302b311}</Project>
       <Name>Web.Common</Name>
