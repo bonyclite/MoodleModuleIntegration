@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
+using System.Web.Routing;
 using Autofac;
 using Autofac.Builder;
 using Autofac.Integration.Mvc;
@@ -39,10 +40,19 @@ namespace Web.Common.App
 
         protected virtual void RegisterBundles()
         {
+            BundleConfig.RegisterBundles();
         }
 
         protected virtual void RegisterRoutes()
         {
+            RouteTable.Routes.LowercaseUrls = true;
+
+            RouteTable.Routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            RouteTable.Routes.MapRoute(
+                "ScriptResources",
+                "Scripts/{*file}",
+                new { controller = "Resources", action = "Scripts" });
         }
 
         protected virtual void SetDependencyResolver(IContainer container)

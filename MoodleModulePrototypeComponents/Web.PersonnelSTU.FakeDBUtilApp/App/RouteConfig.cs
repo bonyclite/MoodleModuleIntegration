@@ -11,8 +11,6 @@ namespace Web.PersonnelSTU.FakeDBUtilApp
     {
         public static void RegisterRoutes()
         {
-            RouteTable.Routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
             RouteTable.Routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
