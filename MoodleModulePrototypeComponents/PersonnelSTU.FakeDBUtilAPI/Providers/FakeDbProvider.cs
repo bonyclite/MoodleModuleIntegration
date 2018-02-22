@@ -16,7 +16,7 @@ namespace PersonnelSTU.FakeDBUtilAPI.Providers
 
         public IReadOnlyCollection<string> GetViews()
         {
-            return Enumerable.Empty<string>().ToArray();
+            return Enumerable.Range(0, 10).Select(i => Guid.NewGuid().ToString()).ToArray();
         }
 
         public void CreateFakeDb(string dbName)

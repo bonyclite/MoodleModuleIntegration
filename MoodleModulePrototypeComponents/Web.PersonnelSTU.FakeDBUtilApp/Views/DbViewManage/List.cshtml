@@ -1,0 +1,24 @@
+﻿@using Web.Common.App.Extensions
+@using Web.PersonnelSTU.FakeDBUtilApp.Controllers
+@model Web.PersonnelSTU.FakeDBUtilApp.Views.DbViewManage.ListModel
+
+@{
+    ViewBag.Title = "Views";
+}
+
+@using (Html.BeginForm<DbViewManageController>(c => c.List(null)))
+{
+    foreach (var view in Model.Views)
+    {
+        <div>
+            <label>
+                <input type="checkbox"
+                       name="SelectedViews"
+                       value="@view.Value" /> @view.Text
+            </label>
+        </div>
+    }
+    <div>
+        <input type="submit" value="Добавить"/>
+    </div>    
+}
