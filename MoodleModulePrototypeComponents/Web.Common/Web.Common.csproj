@@ -105,17 +105,13 @@
     <EmbeddedResource Include="Scripts\jquery-3.3.1.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common.Data\Common.Data.csproj">
+      <Project>{5b1d3893-720d-4bb9-8a10-7ab2edd2803e}</Project>
+      <Name>Common.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{93086ED9-4E39-4E28-9C12-9BFB60258F16}</Project>
       <Name>Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PersonnelSTU.Data\PersonnelSTU.Data.csproj">
-      <Project>{e6e1850a-082e-4ca7-bce0-0d4881305629}</Project>
-      <Name>PersonnelSTU.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PersonnelSTU.Domain\PersonnelSTU.Domain.csproj">
-      <Project>{dff09623-6e81-4fb8-9649-5a59af4a3622}</Project>
-      <Name>PersonnelSTU.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -5,6 +5,7 @@ using Autofac;
 using Autofac.Builder;
 using Autofac.Integration.Mvc;
 using Common;
+using Common.Data;
 
 namespace Web.Common.App
 {
@@ -35,7 +36,7 @@ namespace Web.Common.App
 
         public virtual void RegisterTypes(ContainerBuilder builder)
         {
-            PersonnelSTU.Data.Bootstrapper.RegisterTypes(builder, LifetimeScopeConfigurator);
+            Bootstrapper.RegisterTypes(builder, LifetimeScopeConfigurator);
         }
 
         protected virtual void RegisterBundles()

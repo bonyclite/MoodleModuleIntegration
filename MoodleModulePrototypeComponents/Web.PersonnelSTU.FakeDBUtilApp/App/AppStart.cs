@@ -3,7 +3,8 @@ using System.Web;
 using Autofac;
 using Autofac.Builder;
 using Autofac.Integration.Mvc;
-using PersonnelSTU.FakeDBUtilAPI;
+using FakeDBUtilAPI = PersonnelSTU.FakeDBUtilAPI;
+using Data = PersonnelSTU.Data;
 
 [assembly: PreApplicationStartMethod(typeof(Web.PersonnelSTU.FakeDBUtilApp.AppStart), nameof(Web.PersonnelSTU.FakeDBUtilApp.AppStart.Start))]
 namespace Web.PersonnelSTU.FakeDBUtilApp
@@ -23,7 +24,8 @@ namespace Web.PersonnelSTU.FakeDBUtilApp
         {
             base.RegisterTypes(builder);           
 
-            Bootstrapper.RegisterTypes(builder, LifetimeScopeConfigurator);
+            Data.Bootstrapper.RegisterTypes(builder, LifetimeScopeConfigurator);
+            FakeDBUtilAPI.Bootstrapper.RegisterTypes(builder, LifetimeScopeConfigurator);
             builder.RegisterControllers(typeof(AppStart).Assembly).PropertiesAutowired();
         }
 

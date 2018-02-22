@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Autofac;
 using Autofac.Builder;
-using PersonnelSTU.Data;
+using Common.Data;
 using PersonnelSTU.FakeDBUtilAPI.Providers;
 
 namespace PersonnelSTU.FakeDBUtilAPI

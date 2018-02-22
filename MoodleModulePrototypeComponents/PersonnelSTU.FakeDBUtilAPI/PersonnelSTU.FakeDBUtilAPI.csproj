@@ -53,6 +53,10 @@
     <Compile Include="Providers\FakeDbProvider.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common.Data\Common.Data.csproj">
+      <Project>{5b1d3893-720d-4bb9-8a10-7ab2edd2803e}</Project>
+      <Name>Common.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PersonnelSTU.Data\PersonnelSTU.Data.csproj">
       <Project>{e6e1850a-082e-4ca7-bce0-0d4881305629}</Project>
       <Name>PersonnelSTU.Data</Name>
