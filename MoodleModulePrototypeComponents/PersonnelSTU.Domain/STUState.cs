@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PersonnelSTU.Domain
 {
-    public class STUState
+    public class StuState
     {
     }
 }
