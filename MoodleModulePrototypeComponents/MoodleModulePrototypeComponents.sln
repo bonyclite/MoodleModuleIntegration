@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Common", "Web.Common\We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.PersonnelSTU.FakeDBUtilApp", "Web.PersonnelSTU.FakeDBUtilApp\Web.PersonnelSTU.FakeDBUtilApp.csproj", "{5BEAD415-46E8-4819-87AB-4FDFE5CD0938}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Data", "Common.Data\Common.Data.csproj", "{5B1D3893-720D-4BB9-8A10-7AB2EDD2803E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{5BEAD415-46E8-4819-87AB-4FDFE5CD0938}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BEAD415-46E8-4819-87AB-4FDFE5CD0938}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BEAD415-46E8-4819-87AB-4FDFE5CD0938}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B1D3893-720D-4BB9-8A10-7AB2EDD2803E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B1D3893-720D-4BB9-8A10-7AB2EDD2803E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B1D3893-720D-4BB9-8A10-7AB2EDD2803E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B1D3893-720D-4BB9-8A10-7AB2EDD2803E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
