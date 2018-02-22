@@ -71,6 +71,10 @@
       <Project>{5b1d3893-720d-4bb9-8a10-7ab2edd2803e}</Project>
       <Name>Common.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Common.Domain\Common.Domain.csproj">
+      <Project>{ae801ccf-ea57-446e-ade4-3c0ecc6ef32c}</Project>
+      <Name>Common.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{93086ed9-4e39-4e28-9c12-9bfb60258f16}</Project>
       <Name>Common</Name>

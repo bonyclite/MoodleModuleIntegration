@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Common.Domain;
 
 namespace PersonnelSTU.Domain
 {
-    public class Specialty
+    public class Specialty : EntityBase
     {
     }
 }
