@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using PersonnelSTU.Data.Infrastructure;
 using PersonnelSTU.Data.Providers;
 
@@ -12,6 +10,9 @@ namespace PersonnelSTU.FakeDBUtilAPI.Providers
         IReadOnlyCollection<string> GetViews();
     }
 
+    [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
+    [SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
+    [SuppressMessage("ReSharper", "UnusedAutoPropertyAccessor.Global")]
     public class DbProvider : IDbProvider
     {
         public ISqlProvider SqlProvider { get; set; }

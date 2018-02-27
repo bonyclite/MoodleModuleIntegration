@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Autofac;
@@ -9,13 +10,19 @@ using Common.Data;
 
 namespace Web.Common.App
 {
+    [SuppressMessage("ReSharper", "MemberCanBeProtected.Global")]
+    [SuppressMessage("ReSharper", "VirtualMemberNeverOverridden.Global")]
     public class AppStart
     {
-        public Func<IRegistrationBuilder<object, object, object>, IRegistrationBuilder<object, object, object>> LifetimeScopeConfigurator { get; }
+        public Func<IRegistrationBuilder<object, object, object>, IRegistrationBuilder<object, object, object>>
+            LifetimeScopeConfigurator { get; }
 
-        public AppStart(Func<IRegistrationBuilder<object, object, object>, IRegistrationBuilder<object, object, object>> lifetimeScopeConfigurator = null)
+        public AppStart(
+            Func<IRegistrationBuilder<object, object, object>, IRegistrationBuilder<object, object, object>>
+                lifetimeScopeConfigurator = null)
         {
-            LifetimeScopeConfigurator = lifetimeScopeConfigurator ?? (registrationBuilder => registrationBuilder.InstancePerRequest());
+            LifetimeScopeConfigurator = lifetimeScopeConfigurator ??
+                                        (registrationBuilder => registrationBuilder.InstancePerRequest());
         }
 
         public virtual void Run()
@@ -53,7 +60,7 @@ namespace Web.Common.App
             RouteTable.Routes.MapRoute(
                 "ScriptResources",
                 "Scripts/{*file}",
-                new { controller = "Resources", action = "Scripts" });
+                new {controller = "Resources", action = "Scripts"});
         }
 
         protected virtual void SetDependencyResolver(IContainer container)

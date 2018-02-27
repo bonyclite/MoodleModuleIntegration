@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums.cs" />
     <Compile Include="Faculty.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="Person.cs" />
@@ -49,10 +51,14 @@
     <Compile Include="STUState.cs" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <ProjectReference Include="..\Common.Domain\Common.Domain.csproj">
       <Project>{ae801ccf-ea57-446e-ade4-3c0ecc6ef32c}</Project>
       <Name>Common.Domain</Name>
     </ProjectReference>
+=======
+    <None Include="App.config" />
+>>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

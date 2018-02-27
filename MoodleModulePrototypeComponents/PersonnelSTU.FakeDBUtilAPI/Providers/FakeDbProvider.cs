@@ -1,27 +1,52 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using PersonnelSTU.Data.Infrastructure;
+using PersonnelSTU.Data.Providers;
 
 namespace PersonnelSTU.FakeDBUtilAPI.Providers
 {
     public interface IFakeDbProvider : IDbProvider
     {
-        void CreateFakeDb(string dbName);
+        void CreateFakeDb(IEnumerable<string> viewNames);
     }
 
+    [SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
+    [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
+    [SuppressMessage("ReSharper", "UnusedAutoPropertyAccessor.Global")]
     public class FakeDbProvider : IFakeDbProvider
     {
-        public IDbProvider DbProvider { get; set; }
+        public ISqlProvider SqlProvider { get; set; }
 
         public IReadOnlyCollection<string> GetViews()
         {
+<<<<<<< Updated upstream
             return Enumerable.Range(0, 10).Select(i => Guid.NewGuid().ToString()).ToArray();
+=======
+            SqlProvider.OpenConnection(AppConfig.FakePersonnelSTUDbConnectionString);
+            var sqlReader = SqlProvider.ExecuteReader($@"Use {AppConfig.PersonnelSTUDbName} SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'VIEW'");
+            
+            var views = new List<string>();
+
+            while (sqlReader.Read())
+            {
+                views.Add(sqlReader["TABLE_NAME"].ToString());
+            }
+
+            SqlProvider.CloseLastOpenedConnection();
+
+            return views;
         }
 
-        public void CreateFakeDb(string dbName)
+        public void CreateFakeDb(IEnumerable<string> viewNames)
         {
-            throw new NotImplementedException();
+            
+>>>>>>> Stashed changes
+        }
+
+        private void CreateTable()
+        {
+            
         }
     }
 }
