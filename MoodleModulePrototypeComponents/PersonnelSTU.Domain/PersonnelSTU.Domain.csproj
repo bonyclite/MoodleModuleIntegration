@@ -49,16 +49,14 @@
     <Compile Include="Specialty.cs" />
     <Compile Include="StudentState.cs" />
     <Compile Include="STUState.cs" />
+    <Compile Include="Teacher.cs" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
     <ProjectReference Include="..\Common.Domain\Common.Domain.csproj">
       <Project>{ae801ccf-ea57-446e-ade4-3c0ecc6ef32c}</Project>
       <Name>Common.Domain</Name>
     </ProjectReference>
-=======
     <None Include="App.config" />
->>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

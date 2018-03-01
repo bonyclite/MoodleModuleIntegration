@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using PersonnelSTU.Data.Infrastructure;
 using PersonnelSTU.Data.Providers;
 
@@ -20,12 +22,13 @@ namespace PersonnelSTU.FakeDBUtilAPI.Providers
 
         public IReadOnlyCollection<string> GetViews()
         {
-<<<<<<< Updated upstream
             return Enumerable.Range(0, 10).Select(i => Guid.NewGuid().ToString()).ToArray();
-=======
             SqlProvider.OpenConnection(AppConfig.FakePersonnelSTUDbConnectionString);
-            var sqlReader = SqlProvider.ExecuteReader($@"Use {AppConfig.PersonnelSTUDbName} SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'VIEW'");
-            
+            var sqlReader = SqlProvider.ExecuteReader(
+                $@"Use {
+                        AppConfig.PersonnelSTUDbName
+                    } SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'VIEW'");
+
             var views = new List<string>();
 
             while (sqlReader.Read())
@@ -40,13 +43,10 @@ namespace PersonnelSTU.FakeDBUtilAPI.Providers
 
         public void CreateFakeDb(IEnumerable<string> viewNames)
         {
-            
->>>>>>> Stashed changes
         }
 
         private void CreateTable()
         {
-            
         }
     }
 }

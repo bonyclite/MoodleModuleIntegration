@@ -1,39 +1,43 @@
-<<<<<<< Updated upstream
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Common.Domain;
 
 namespace PersonnelSTU.Domain
 {
-    public class Specialty : EntityBase
-=======
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace PersonnelSTU.Domain
-{
+    /// <summary>
+    /// Spec - таблица специальностей
+    /// </summary>
     [Table("Spec")]
-    public class Specialty
->>>>>>> Stashed changes
+    public class Specialty : EntityBase
     {
+        /// <summary>
+        /// iSpec- код специальности (к)
+        /// </summary>
         [Column("iSpec"), MaxLength(5), Required]
-        public string Id { get; set; }
-        
+        public virtual string Id { get; set; }
+
+        /// <summary>
+        /// iFac - на каком факультете, ссылка на VwFaculty.iDepartment
+        /// </summary>
         [Column("iFac"), Required]
-        public short Faculty { get; set; }
-        
+        public virtual short Faculty { get; set; }
+
+        /// <summary>
+        /// SpecName - наименование спец.
+        /// </summary>
         [Column("SpecName"), MaxLength(220), Required]
-        public string Name { get; set; }
-        
-        [Column("SpecNumber")]
+        public virtual string Name { get; set; }
+
+        /// <summary>
+        /// SpecNumber - номер/шифр
+        /// </summary>
+        [Column("SpecNumber"), MaxLength(8), Required]
+        public virtual string SpecNumber { get; set; }
+
+        /// <summary>
+        /// форма обучения (1- очная, 2 - заочная, 3 вечерняя)
+        /// </summary>
+        [Column("EduForm")]
+        public virtual EduForm EduForm { get; set; }
     }
 }
-
-//Spec - таблица специальностей, где
-//iSpec- код специальности (к)
-//iFac - на каком факультете,  ссылка на VwFaculty.iDepartment
-//SpecName - наименование спец.
-//SpecNumber - номер/шифр
-//EduForm - форма обучения (1- очная, 2 - заочная, 3 вечерняя)
