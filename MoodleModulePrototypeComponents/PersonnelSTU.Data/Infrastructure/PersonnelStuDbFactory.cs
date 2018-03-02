@@ -6,7 +6,12 @@ using Common.Data.Infrastructure;
 
 namespace PersonnelSTU.Data.Infrastructure
 {
-    public class PersonnelStuDbFactory : DbFactoryBase
+    public interface IPersonnelStuDbFactory : IDbFactory
+    {
+        
+    }
+
+    public class PersonnelStuDbFactory : DbFactoryBase, IPersonnelStuDbFactory
     {
         protected override IDbContext Create()
         {

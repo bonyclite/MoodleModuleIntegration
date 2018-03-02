@@ -17,12 +17,12 @@ namespace Common.Data.Repositories
         IQueryable<TResult> GetMany<TResult>(Expression<Func<TEntity, bool>> where, Expression<Func<TEntity, TResult>> selector);
     }
 
-    public class EntityRepositoryBase<TEntity> : IEntityRepository<TEntity> where TEntity : class, IEntityBase
+    public class EntityRepositoryBase<TEntity, TDbFactory> : IEntityRepository<TEntity> where TEntity : class, IEntityBase where TDbFactory : IDbFactory 
     {
         protected IDbContext DataContext { get; }
         protected DbSet<TEntity> Entities { get; }
 
-        public EntityRepositoryBase(IDbFactory dbFactory)
+        public EntityRepositoryBase(TDbFactory dbFactory)
         {
             DataContext = dbFactory.Get();
             Entities = DataContext.Set<TEntity>();
