@@ -8,7 +8,7 @@ namespace PersonnelSTU.Data.Infrastructure
 {
     public interface IPersonnelStuDbFactory : IDbFactory
     {
-        
+
     }
 
     public class PersonnelStuDbFactory : DbFactoryBase, IPersonnelStuDbFactory
