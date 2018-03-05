@@ -38,6 +38,6 @@ namespace PersonnelSTU.Domain
         /// форма обучения (1- очная, 2 - заочная, 3 вечерняя)
         /// </summary>
         [Column("EduForm")]
-        public virtual EduForm EduForm { get; set; }
+        public virtual short EduForm { get; set; }
     }
 }

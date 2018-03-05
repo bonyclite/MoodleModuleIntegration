@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Diagnostics.CodeAnalysis;
 using Common.Data.Infrastructure;
 
 namespace PersonnelSTU.Data.Infrastructure
@@ -11,11 +8,12 @@ namespace PersonnelSTU.Data.Infrastructure
 
     }
 
+    [SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
     public class PersonnelStuDbFactory : DbFactoryBase, IPersonnelStuDbFactory
     {
         protected override IDbContext Create()
         {
-            return new DbContextAdapter(new PersonnelStuDbContext());
+            return new DbContextAdapter(new PersonnelStuDbContext(AppConfig.FakePersonnelSTUDbConnectionString));
         }
     }
 }

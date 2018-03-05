@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PersonnelSTU.Data.Infrastructure;
 using PersonnelSTU.FakeDBUtilAPI.Providers;
 using Web.Common.App.Extensions;
 using Web.PersonnelSTU.FakeDBUtilApp.Views.DbViewManage;
@@ -13,6 +14,7 @@ namespace Web.PersonnelSTU.FakeDBUtilApp.Controllers
     {
         public IDbProvider DbProvider { get; set; }
         public IFakeDbProvider FakeDbProvider { get; set; }
+        public PersonnelStuDbFactory DbFactory { get; set; }
 
         [HttpGet]
         public ActionResult List()

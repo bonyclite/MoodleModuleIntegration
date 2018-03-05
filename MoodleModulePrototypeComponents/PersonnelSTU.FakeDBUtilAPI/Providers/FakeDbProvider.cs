@@ -23,22 +23,6 @@ namespace PersonnelSTU.FakeDBUtilAPI.Providers
         public IReadOnlyCollection<string> GetViews()
         {
             return Enumerable.Range(0, 10).Select(i => Guid.NewGuid().ToString()).ToArray();
-            SqlProvider.OpenConnection(AppConfig.FakePersonnelSTUDbConnectionString);
-            var sqlReader = SqlProvider.ExecuteReader(
-                $@"Use {
-                        AppConfig.PersonnelSTUDbName
-                    } SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'VIEW'");
-
-            var views = new List<string>();
-
-            while (sqlReader.Read())
-            {
-                views.Add(sqlReader["TABLE_NAME"].ToString());
-            }
-
-            SqlProvider.CloseLastOpenedConnection();
-
-            return views;
         }
 
         public void CreateFakeDb(IEnumerable<string> viewNames)

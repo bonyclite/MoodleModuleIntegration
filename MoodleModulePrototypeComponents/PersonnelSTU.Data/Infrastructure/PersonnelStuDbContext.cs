@@ -11,10 +11,15 @@ namespace PersonnelSTU.Data.Infrastructure
         public DbSet<Specialty> Specialties { get; set; }
         public DbSet<StudentState> StudentStates { get; set; }
         public DbSet<StuState> StuStates { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
 
-        public PersonnelStuDbContext() : base(AppConfig.FakePersonnelSTUDbConnectionString)
+        public PersonnelStuDbContext()
         {
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<PersonnelStuDbContext>());
+        }
 
+        public PersonnelStuDbContext(string connectionString) : base(connectionString)
+        {
         }
     }
 }

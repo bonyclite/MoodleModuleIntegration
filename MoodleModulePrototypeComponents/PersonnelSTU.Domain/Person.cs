@@ -20,14 +20,14 @@ namespace PersonnelSTU.Domain
         /// <summary>
         /// PersonName - фио вместе по последнимм данным
         /// </summary>
-        [Column("PersonName"), MaxLength(42), Required]
+        [Column("PersonName"), MaxLength(42)]
         public virtual string Name { get; set; }
 
         /// <summary>
         /// BirthDate - Дата рождения
         /// </summary>
         [Column("BirthDate")]
-        public virtual DateTime BirthDate { get; set; }
+        public virtual DateTime? BirthDate { get; set; }
 
         /// <summary>
         /// Sex - пол, м или ж

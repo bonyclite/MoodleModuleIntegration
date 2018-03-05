@@ -19,7 +19,7 @@ namespace PersonnelSTU.Domain
         /// <summary>
         /// DepName - наименование
         /// </summary>
-        [Column("DepName"), MaxLength(50), Required]
+        [Column("DepName"), Required]
         public virtual string Name { get; set; }
     }
 }
