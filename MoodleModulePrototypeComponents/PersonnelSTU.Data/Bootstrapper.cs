@@ -6,7 +6,6 @@ using Autofac;
 using Autofac.Builder;
 using Common.Data;
 using PersonnelSTU.Data.Infrastructure;
-using PersonnelSTU.Data.Providers;
 using PersonnelSTU.Data.Repositories;
 
 namespace PersonnelSTU.Data
@@ -15,7 +14,6 @@ namespace PersonnelSTU.Data
     {
         public static void RegisterTypes(ContainerBuilder builder, Func<IRegistrationBuilder<object, object, object>, IRegistrationBuilder<object, object, object>> lifetimeScopeConfigurator)
         {
-            builder.RegisterType<SqlProvider>().As<ISqlProvider>().ApplyDefaultConfiguration(lifetimeScopeConfigurator);
             builder.RegisterType<PersonnelStuDbFactory>().As<IPersonnelStuDbFactory>().ApplyDefaultConfiguration(lifetimeScopeConfigurator);
             builder.RegisterType<FacultyRepository>().As<IFacultyRepository>().ApplyDefaultConfiguration(lifetimeScopeConfigurator);
             builder.RegisterType<GroupRepository>().As<IGroupRepository>().ApplyDefaultConfiguration(lifetimeScopeConfigurator);

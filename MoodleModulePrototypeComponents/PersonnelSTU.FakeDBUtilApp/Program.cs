@@ -12,9 +12,6 @@ namespace PersonnelSTU.FakeDBUtilApp
             var realContext = new PersonnelStuDbContext(AppConfig.PersonnelSTUDbConnectionString);
             var fakeContext = new PersonnelStuDbContext(AppConfig.FakePersonnelSTUDbConnectionString);
             
-            //if (realContext.Database.Connection.State == ConnectionState.Closed) realContext.Database.Connection.Open();
-            //if (fakeContext.Database.Connection.State == ConnectionState.Closed) fakeContext.Database.Connection.Open();
-
             var faculties = realContext.Faculties.AsNoTracking().ToArray();
             fakeContext.Faculties.AddRange(faculties);
 
