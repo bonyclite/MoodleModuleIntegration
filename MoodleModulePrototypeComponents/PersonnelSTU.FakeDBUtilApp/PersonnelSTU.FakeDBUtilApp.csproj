@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EmbeddedResource Include="FakePersonnelSTUDb.dacpac" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

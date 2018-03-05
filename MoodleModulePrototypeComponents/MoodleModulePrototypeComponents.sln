@@ -12,9 +12,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelSTU.Data", "PersonnelSTU.Data\PersonnelSTU.Data.csproj", "{E6E1850A-082E-4CA7-BCE0-0D4881305629}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PersonnelSTU.FakeDBUtils", "PersonnelSTU.FakeDBUtils", "{5B15CDF2-A575-4E76-A92E-1AAA32FC6D6B}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\FakePersonnelSTUDb.dacpac = ..\..\FakePersonnelSTUDb.dacpac
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{457C137A-DA15-44B7-88A8-E3A82BA668FD}"
 EndProject
