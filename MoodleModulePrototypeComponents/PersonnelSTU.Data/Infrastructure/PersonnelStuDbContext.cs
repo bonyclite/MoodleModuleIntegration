@@ -1,8 +1,12 @@
 ﻿using System.Data.Entity;
+using System.Diagnostics.CodeAnalysis;
+using PersonnelSTU.Data.Migrations;
 using PersonnelSTU.Domain;
 
 namespace PersonnelSTU.Data.Infrastructure
 {
+    [SuppressMessage("ReSharper", "UnusedAutoPropertyAccessor.Global")]
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public class PersonnelStuDbContext : DbContext
     {
         public DbSet<Faculty> Faculties { get; set; }
@@ -13,13 +17,14 @@ namespace PersonnelSTU.Data.Infrastructure
         public DbSet<StuState> StuStates { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
 
-        public PersonnelStuDbContext()
+        public PersonnelStuDbContext():this(AppConfig.FakePersonnelSTUDbConnectionString)
         {
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<PersonnelStuDbContext>());
+            
         }
 
         public PersonnelStuDbContext(string connectionString) : base(connectionString)
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<PersonnelStuDbContext, Configuration>());
         }
     }
 }

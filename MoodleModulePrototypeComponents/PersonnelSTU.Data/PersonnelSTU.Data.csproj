@@ -59,6 +59,11 @@
     <Compile Include="Infrastructure\AppConfig.cs" />
     <Compile Include="Infrastructure\PersonnelStuDbContext.cs" />
     <Compile Include="Infrastructure\PersonnelStuDbFactory.cs" />
+    <Compile Include="Migrations\201803080755222_Init.cs" />
+    <Compile Include="Migrations\201803080755222_Init.Designer.cs">
+      <DependentUpon>201803080755222_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\FacultyRepository.cs" />
     <Compile Include="Repositories\GroupRepository.cs" />
@@ -90,6 +95,11 @@
       <Project>{dff09623-6e81-4fb8-9649-5a59af4a3622}</Project>
       <Name>PersonnelSTU.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803080755222_Init.resx">
+      <DependentUpon>201803080755222_Init.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
