@@ -33,8 +33,8 @@ namespace Web.Common.App
 
             builder.RegisterModule(new AutofacWebTypesModule());
 
-            RegisterRoutes(RouteTable.Routes);
-            RegisterBundles(BundleTable.Bundles);
+            RegisterRoutes();
+            RegisterBundles();
 
             builder.RegisterSource(new ViewRegistrationSource());
 
@@ -47,47 +47,21 @@ namespace Web.Common.App
             Bootstrapper.RegisterTypes(builder, LifetimeScopeConfigurator);
         }
 
-        protected virtual void RegisterBundles(BundleCollection bundleCollection)
+        protected virtual void RegisterBundles()
         {
-            bundleCollection.Add(new EmbeddedCommonScriptBundle("~/Scripts/jqueryBundle").IncludeFiles(
-                "~/Scripts/jquery-3.3.1.slim.min.js",
-                "~/Scripts/jquery-3.3.1.min.js"));
-
-            bundleCollection.Add(new EmbeddedCommonScriptBundle("~/Scripts/bootstrap/bundle").IncludeFiles(
-                "~/Scripts/popper.min.js",
-                "~/Scripts/popper.js",
-                "~/Scripts/popper-utils.min.js",
-                "~/Scripts/bootstrap.js",
-                "~/Scripts/bootstrap.min.js"));
-
-            bundleCollection.Add(new EmbeddedCommonScriptBundle("~/Scripts/modernizr/bundle").IncludeFiles(
-                "~/Scripts/modernizr-2.8.3.js"));
-
-            bundleCollection.Add(new EmbeddedCommonStyleBundle("~/Content/site/bundle").IncludeFiles(
-                "~/Content/Site.css"));
-
-            bundleCollection.Add(new EmbeddedCommonStyleBundle("~/Content/fonts/bundle").IncludeFiles(
-                "~/Content/fonts/font-awesome.min.css"));
-
-            bundleCollection.Add(new EmbeddedCommonStyleBundle("~/Content/bootstrap/bundle").IncludeFiles(
-                "~/Content/bootstrap-grid.css",
-                "~/Content/bootstrap-grid.min.css",
-                "~/Content/bootstrap-reboot.css",
-                "~/Content/bootstrap-reboot.min.css",
-                "~/Content/bootstrap.css",
-                "~/Content/bootstrap.min.css"));
+            BundleConfig.RegisterBundles();
         }
 
-        protected virtual void RegisterRoutes(RouteCollection routeCollection)
+        protected virtual void RegisterRoutes()
         {
-            routeCollection.LowercaseUrls = true;
+            RouteTable.Routes.LowercaseUrls = true;
 
-            routeCollection.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            RouteTable.Routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routeCollection.MapRoute(
+            RouteTable.Routes.MapRoute(
                 "ScriptResources",
                 "Scripts/{*file}",
-                new {controller = "Resources", action = "Scripts"});
+                new { controller = "Resources", action = "Scripts" });
         }
 
         protected virtual void SetDependencyResolver(IContainer container)

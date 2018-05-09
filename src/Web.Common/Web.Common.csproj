@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App\AppStart.cs" />
+    <Compile Include="App\BundleConfig.cs" />
     <Compile Include="App\BundleNullOrderer.cs" />
     <Compile Include="App\EmbeddedResourceBundle.cs" />
     <Compile Include="App\Extensions\ControllerExtensions.cs" />
