@@ -1,12 +1,12 @@
-namespace EducationalPlans.Domain 
+namespace EducationalPlans.Domain
 {
- public class СправочникБазы 
-{
-public System.String id { get; set; }
-public System.Int32 rowOrder { get; set; }
-public System.Int32 Код { get; set; }
-public System.String Наименование { get; set; }
-public System.Int32 Уровень { get; set; }
-public System.String Префикс { get; set; }
-}
+    public class СправочникБазы
+    {
+        public string id { get; set; }
+        public int rowOrder { get; set; }
+        public int Код { get; set; }
+        public string Наименование { get; set; }
+        public int Уровень { get; set; }
+        public string Префикс { get; set; }
+    }
 }

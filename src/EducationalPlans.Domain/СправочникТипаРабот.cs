@@ -1,11 +1,11 @@
-namespace EducationalPlans.Domain 
+namespace EducationalPlans.Domain
 {
- public class СправочникТипаРабот 
-{
-public System.String id { get; set; }
-public System.Int32 rowOrder { get; set; }
-public System.Int32 Код { get; set; }
-public System.String Название { get; set; }
-public System.Boolean Отображать { get; set; }
-}
+    public class СправочникТипаРабот
+    {
+        public string id { get; set; }
+        public int rowOrder { get; set; }
+        public int Код { get; set; }
+        public string Название { get; set; }
+        public bool Отображать { get; set; }
+    }
 }

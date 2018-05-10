@@ -1,10 +1,10 @@
-namespace EducationalPlans.Domain 
+namespace EducationalPlans.Domain
 {
- public class СправочникВидОбъекта 
-{
-public System.String id { get; set; }
-public System.Int32 rowOrder { get; set; }
-public System.Int32 Код { get; set; }
-public System.String Наименование { get; set; }
-}
+    public class СправочникВидОбъекта
+    {
+        public string id { get; set; }
+        public int rowOrder { get; set; }
+        public int Код { get; set; }
+        public string Наименование { get; set; }
+    }
 }

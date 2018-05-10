@@ -1,18 +1,18 @@
-namespace EducationalPlans.Domain 
+namespace EducationalPlans.Domain
 {
- public class ПланыКонтингент 
-{
-public System.String id { get; set; }
-public System.Int32 rowOrder { get; set; }
-public System.String hasChanges { get; set; }
-public System.Int32 Код { get; set; }
-public System.Int32 КодПлана { get; set; }
-public System.Int32 Курс { get; set; }
-public System.Int32 ЧислоГрупп { get; set; }
-public System.Int32 ЧислоОбучающихся { get; set; }
-public System.Int32 ЧислоСдающихКандидатскиеЭкзамены { get; set; }
-public System.Int32 ЧислоСоискателей { get; set; }
-public System.Int32 ЧислоПолучДопКвалификацию { get; set; }
-public System.Int32 КодООП { get; set; }
-}
+    public class ПланыКонтингент
+    {
+        public string id { get; set; }
+        public int rowOrder { get; set; }
+        public string hasChanges { get; set; }
+        public int Код { get; set; }
+        public int КодПлана { get; set; }
+        public int Курс { get; set; }
+        public int ЧислоГрупп { get; set; }
+        public int ЧислоОбучающихся { get; set; }
+        public int ЧислоСдающихКандидатскиеЭкзамены { get; set; }
+        public int ЧислоСоискателей { get; set; }
+        public int ЧислоПолучДопКвалификацию { get; set; }
+        public int КодООП { get; set; }
+    }
 }

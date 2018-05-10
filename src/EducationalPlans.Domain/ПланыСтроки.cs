@@ -1,39 +1,39 @@
-namespace EducationalPlans.Domain 
+namespace EducationalPlans.Domain
 {
- public class ПланыСтроки 
-{
-public System.String id { get; set; }
-public System.Int32 rowOrder { get; set; }
-public System.String hasChanges { get; set; }
-public System.Int32 Код { get; set; }
-public System.Int32 КодПлана { get; set; }
-public System.Int32 КодООП { get; set; }
-public System.Int32 КодБлока { get; set; }
-public System.Int32 КодКафедры { get; set; }
-public System.String Дисциплина { get; set; }
-public System.Int32 ТипОбъекта { get; set; }
-public System.Int32 ВидОбъекта { get; set; }
-public System.Boolean РассредПрактика { get; set; }
-public System.Int32 УровеньВложения { get; set; }
-public System.Boolean ПризнакФизкультуры { get; set; }
-public System.Boolean СчитатьБезЗЕТ { get; set; }
-public System.Boolean СчитатьВПлане { get; set; }
-public System.Boolean НеСчитатьКонтроль { get; set; }
-public System.Boolean ЗаСчетПолевых { get; set; }
-public System.String ДисциплинаКод { get; set; }
-public System.Int32 ТрудоемкостьКредитов { get; set; }
-public System.Int32 ЧасовВЗЕТ { get; set; }
-public System.Int32 ЗЕТфакт { get; set; }
-public System.Int32 ЗЕТизучено { get; set; }
-public System.Int32 ЧасовПоЗЕТ { get; set; }
-public System.Int32 ЧасовПоПлану { get; set; }
-public System.Int32 ПодлежитИзучениюЧасов { get; set; }
-public System.Boolean НестандартНедПрактики { get; set; }
-public System.Boolean ReadOnly { get; set; }
-public System.Boolean Свернуть { get; set; }
-public System.Int32 Multiselect { get; set; }
-public System.Int32 Оценка { get; set; }
-public System.Int32 ТипПерезачета { get; set; }
-public System.Boolean Адаптационная { get; set; }
-}
+    public class ПланыСтроки
+    {
+        public string id { get; set; }
+        public int rowOrder { get; set; }
+        public string hasChanges { get; set; }
+        public int Код { get; set; }
+        public int КодПлана { get; set; }
+        public int КодООП { get; set; }
+        public int КодБлока { get; set; }
+        public int КодКафедры { get; set; }
+        public string Дисциплина { get; set; }
+        public int ТипОбъекта { get; set; }
+        public int ВидОбъекта { get; set; }
+        public bool РассредПрактика { get; set; }
+        public int УровеньВложения { get; set; }
+        public bool ПризнакФизкультуры { get; set; }
+        public bool СчитатьБезЗЕТ { get; set; }
+        public bool СчитатьВПлане { get; set; }
+        public bool НеСчитатьКонтроль { get; set; }
+        public bool ЗаСчетПолевых { get; set; }
+        public string ДисциплинаКод { get; set; }
+        public int ТрудоемкостьКредитов { get; set; }
+        public int ЧасовВЗЕТ { get; set; }
+        public int ЗЕТфакт { get; set; }
+        public int ЗЕТизучено { get; set; }
+        public int ЧасовПоЗЕТ { get; set; }
+        public int ЧасовПоПлану { get; set; }
+        public int ПодлежитИзучениюЧасов { get; set; }
+        public bool НестандартНедПрактики { get; set; }
+        public bool ReadOnly { get; set; }
+        public bool Свернуть { get; set; }
+        public int Multiselect { get; set; }
+        public int Оценка { get; set; }
+        public int ТипПерезачета { get; set; }
+        public bool Адаптационная { get; set; }
+    }
 }

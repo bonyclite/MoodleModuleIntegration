@@ -1,20 +1,20 @@
-namespace EducationalPlans.Domain 
+namespace EducationalPlans.Domain
 {
- public class ПланыЦиклы 
-{
-public System.String id { get; set; }
-public System.Int32 rowOrder { get; set; }
-public System.String hasChanges { get; set; }
-public System.Int32 Код { get; set; }
-public System.Int32 КодПлана { get; set; }
-public System.Int32 ТипБлока { get; set; }
-public System.Int32 ТипОбъекта { get; set; }
-public System.Boolean Факультативы { get; set; }
-public System.String Идентификатор { get; set; }
-public System.String Цикл { get; set; }
-public System.Int32 ЗЕТмин { get; set; }
-public System.Int32 ЗЕТмакс { get; set; }
-public System.Boolean Физкультура { get; set; }
-public System.Int32 СтарыйКод { get; set; }
-}
+    public class ПланыЦиклы
+    {
+        public string id { get; set; }
+        public int rowOrder { get; set; }
+        public string hasChanges { get; set; }
+        public int Код { get; set; }
+        public int КодПлана { get; set; }
+        public int ТипБлока { get; set; }
+        public int ТипОбъекта { get; set; }
+        public bool Факультативы { get; set; }
+        public string Идентификатор { get; set; }
+        public string Цикл { get; set; }
+        public int ЗЕТмин { get; set; }
+        public int ЗЕТмакс { get; set; }
+        public bool Физкультура { get; set; }
+        public int СтарыйКод { get; set; }
+    }
 }

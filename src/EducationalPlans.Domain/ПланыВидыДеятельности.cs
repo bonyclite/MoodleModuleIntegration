@@ -1,14 +1,14 @@
-namespace EducationalPlans.Domain 
+namespace EducationalPlans.Domain
 {
- public class ПланыВидыДеятельности 
-{
-public System.String id { get; set; }
-public System.Int32 rowOrder { get; set; }
-public System.String hasChanges { get; set; }
-public System.Int32 Код { get; set; }
-public System.Int32 КодПлана { get; set; }
-public System.Int32 КодВидаДеятельности { get; set; }
-public System.Int32 КодООП { get; set; }
-public System.Boolean Основной { get; set; }
-}
+    public class ПланыВидыДеятельности
+    {
+        public string id { get; set; }
+        public int rowOrder { get; set; }
+        public string hasChanges { get; set; }
+        public int Код { get; set; }
+        public int КодПлана { get; set; }
+        public int КодВидаДеятельности { get; set; }
+        public int КодООП { get; set; }
+        public bool Основной { get; set; }
+    }
 }

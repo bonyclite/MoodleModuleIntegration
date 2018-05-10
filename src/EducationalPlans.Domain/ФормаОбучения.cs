@@ -4,13 +4,15 @@ namespace EducationalPlans.Domain
 {
     public class ФормаОбучения
     {
-        public System.String id { get; set; }
-        public System.Int32 rowOrder { get; set; }
-        public System.Int32 Код { get; set; }
+        public string id { get; set; }
+        public int rowOrder { get; set; }
+        public int Код { get; set; }
+
         [XmlAttribute("ФормаОбучения")]
-        public System.String Форма { get; set; }
-        public System.String Сокращение { get; set; }
-        public System.Boolean Вывод { get; set; }
-        public System.String Префикс { get; set; }
+        public string Форма { get; set; }
+
+        public string Сокращение { get; set; }
+        public bool Вывод { get; set; }
+        public string Префикс { get; set; }
     }
 }

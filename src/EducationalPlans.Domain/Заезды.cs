@@ -1,17 +1,17 @@
-namespace EducationalPlans.Domain 
+namespace EducationalPlans.Domain
 {
- public class Заезды 
-{
-public System.String id { get; set; }
-public System.Int32 rowOrder { get; set; }
-public System.String hasChanges { get; set; }
-public System.Int32 Код { get; set; }
-public System.Int32 Курс { get; set; }
-public System.Int32 Сессия { get; set; }
-public System.String Название { get; set; }
-public System.String ДатаНачала { get; set; }
-public System.Int32 Продолжительность { get; set; }
-public System.Int32 КодПлана { get; set; }
-public System.Int32 Семестр { get; set; }
-}
+    public class Заезды
+    {
+        public string id { get; set; }
+        public int rowOrder { get; set; }
+        public string hasChanges { get; set; }
+        public int Код { get; set; }
+        public int Курс { get; set; }
+        public int Сессия { get; set; }
+        public string Название { get; set; }
+        public string ДатаНачала { get; set; }
+        public int Продолжительность { get; set; }
+        public int КодПлана { get; set; }
+        public int Семестр { get; set; }
+    }
 }

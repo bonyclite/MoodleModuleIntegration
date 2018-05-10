@@ -1,202 +1,202 @@
-namespace EducationalPlans.Domain 
+namespace EducationalPlans.Domain
 {
- public class ПараметрыПлана 
-{
-public System.String id { get; set; }
-public System.Int32 rowOrder { get; set; }
-public System.String hasChanges { get; set; }
-public System.Int32 КодПлана { get; set; }
-public System.Int32 count { get; set; }
-public System.Boolean Flag_FillTitle { get; set; }
-public System.Boolean Flag_SrokO { get; set; }
-public System.Int32 SrokOYear { get; set; }
-public System.Int32 SrokOMonth { get; set; }
-public System.Boolean Flag_OOPItog { get; set; }
-public System.Int32 OOPItog { get; set; }
-public System.Boolean Flag_OOPyear { get; set; }
-public System.Int32 OOPyear { get; set; }
-public System.Boolean Flag_ZETdelta { get; set; }
-public System.Boolean Flag_DVVpersent { get; set; }
-public System.Boolean Flag_DVVpersent1p3 { get; set; }
-public System.Int32 DVVpersent30Min { get; set; }
-public System.Int32 DVVpersent30Max { get; set; }
-public System.Boolean Flag_BasePart { get; set; }
-public System.Int32 BasePartMin { get; set; }
-public System.Int32 BasePartMax { get; set; }
-public System.Boolean Flag_ZETDiscMin { get; set; }
-public System.Int32 ZETDiscMin { get; set; }
-public System.Boolean Flag_DiscZETIsInt { get; set; }
-public System.Boolean Flag_DiscZETYearIsInt { get; set; }
-public System.Boolean Flag_ZETExpertTrue { get; set; }
-public System.Boolean Flag_DiscZETExpertTrue { get; set; }
-public System.Boolean Flag_HinW54 { get; set; }
-public System.Int32 HinW54 { get; set; }
-public System.Boolean Flag_HinWAudit { get; set; }
-public System.Int32 HinWAuditMin { get; set; }
-public System.Int32 HinWAuditMax { get; set; }
-public System.Boolean Flag_HinWAuditSr { get; set; }
-public System.Int32 HinWAuditSrMin { get; set; }
-public System.Int32 HinWAuditSrMax { get; set; }
-public System.Boolean Flag_Lect { get; set; }
-public System.Int32 LectMin { get; set; }
-public System.Int32 LectMax { get; set; }
-public System.Boolean Flag_Inter { get; set; }
-public System.Int32 InterMin { get; set; }
-public System.Int32 InterMax { get; set; }
-public System.Boolean Flag_ZETAndHoursIsTrue { get; set; }
-public System.Boolean Flag_DiscZETAndHoursIsTrue { get; set; }
-public System.Boolean Flag_DiscSemZETAndHoursIsTrue { get; set; }
-public System.Boolean Flag_AuditAll { get; set; }
-public System.Int32 AuditAllMin { get; set; }
-public System.Int32 AudetAllMax { get; set; }
-public System.Boolean Flag_EqZET36 { get; set; }
-public System.Int32 EqZET36 { get; set; }
-public System.Boolean Flag_EqZETDis32_38 { get; set; }
-public System.Boolean Flag_CntrlEx { get; set; }
-public System.Int32 CntrlExMin { get; set; }
-public System.Int32 CntrlExMax { get; set; }
-public System.Boolean Flag_CntrlExSem { get; set; }
-public System.Int32 CntrlExSemMax { get; set; }
-public System.Boolean Flag_CntrlZach { get; set; }
-public System.Int32 CntrlZachMin { get; set; }
-public System.Int32 CntrlZachMax { get; set; }
-public System.Boolean Flag_CntrlZachSem { get; set; }
-public System.Int32 CntrlZachSemMax { get; set; }
-public System.Boolean Flag_CntrlKP { get; set; }
-public System.Int32 CntrlKPMax { get; set; }
-public System.Boolean Flag_CntrlKR { get; set; }
-public System.Int32 CntrlKRMax { get; set; }
-public System.Boolean Flag_CntrlExHours { get; set; }
-public System.Int32 CntrlExHoursMin { get; set; }
-public System.Int32 CntrlExHoursMax { get; set; }
-public System.Boolean Flag_CntrlHasHours { get; set; }
-public System.Boolean Flag_CntrlHasHoursItogS { get; set; }
-public System.Boolean Flag_HoursCouple { get; set; }
-public System.Boolean Flag_HoursKratNed { get; set; }
-public System.Boolean Flag_HoursKratNedFirstPos { get; set; }
-public System.Boolean Flag_HoursKSRForKR { get; set; }
-public System.Int32 HoursKSRForKRMin { get; set; }
-public System.Int32 HoursKSRForKRMax { get; set; }
-public System.Boolean Flag_HoursKSRForKP { get; set; }
-public System.Int32 HoursKSRForKPMin { get; set; }
-public System.Int32 HoursKSRForKPMax { get; set; }
-public System.Boolean Flag_HoursKSRpSRS { get; set; }
-public System.Int32 HoursKSRpSRSMin { get; set; }
-public System.Int32 HoursKSRpSRSMax { get; set; }
-public System.Boolean Flag_HoursAudSemTrue { get; set; }
-public System.Boolean Flag_HoursAudSemTrueWithKSR { get; set; }
-public System.Boolean Flag_HoursSRSSemTrue { get; set; }
-public System.Boolean Flag_HoursSRSSemTrueWithKSR { get; set; }
-public System.Boolean Flag_PracticsWeeksCorrrect { get; set; }
-public System.Boolean Flag_HolidaysWeeks { get; set; }
-public System.Int32 HolidaysWeeksMin { get; set; }
-public System.Int32 HolidaysWeeksMax { get; set; }
-public System.Boolean Flag_HolidaysWinterWeeks { get; set; }
-public System.Int32 HolidaysWinterWeeksMin { get; set; }
-public System.Int32 HolidaysWinterWeeksMax { get; set; }
-public System.Boolean Flag_DiscAltTrue { get; set; }
-public System.Boolean Flag_DiscDiscMust { get; set; }
-public System.Boolean Flag_DiscCompTrue { get; set; }
-public System.Boolean Flag_DiscCompDBTrue { get; set; }
-public System.Boolean Flag_DiscCompHandMadeTrue { get; set; }
-public System.Int32 DiscCompHandMadeOK { get; set; }
-public System.Int32 DiscCompHandMadePK { get; set; }
-public System.Boolean Flag_BaseDiscCompTrue { get; set; }
-public System.Boolean Flag_DiscMinOneCompTrue { get; set; }
-public System.Boolean Flag_DiscFatalCoincidence { get; set; }
-public System.Boolean Flag_DiscKafTrue { get; set; }
-public System.Boolean Flag_DiscPhysCZET { get; set; }
-public System.Int32 DiscPhysCZET { get; set; }
-public System.Boolean Flag_DiscPhysCHours { get; set; }
-public System.Int32 DiscPhysCHours { get; set; }
-public System.Boolean Flag_DiscPhysCHoursPractices { get; set; }
-public System.Int32 DiscPhysCHoursPractices { get; set; }
-public System.Boolean Flag_DiscJustificationZETLocationForCourses { get; set; }
-public System.Int32 DiscJustificationZETLocationForCoursesPosition { get; set; }
-public System.Int32 DiscJustificationZETLocationForCoursesOneZET { get; set; }
-public System.Boolean Flag_ZET_Pereat { get; set; }
-public System.Int32 ZET_Pereat { get; set; }
-public System.Int32 HinWEx54 { get; set; }
-public System.Boolean ShowIndex { get; set; }
-public System.Boolean ShowCmpt { get; set; }
-public System.Boolean ShowKafCode { get; set; }
-public System.Boolean ShowZETExp { get; set; }
-public System.Boolean ShowZETFact { get; set; }
-public System.Boolean ShowHinZET { get; set; }
-public System.Boolean ShowHFromZET { get; set; }
-public System.Boolean ShowHFromPlan { get; set; }
-public System.Boolean ShowItogoKontact { get; set; }
-public System.Boolean ShowItogoAud { get; set; }
-public System.Boolean ShowItogoSRS { get; set; }
-public System.Boolean ShowItogoCtrl { get; set; }
-public System.Boolean ShowItogoInter { get; set; }
-public System.Boolean ShowItogoDist { get; set; }
-public System.Boolean ShowKafName { get; set; }
-public System.Boolean ShowZETPereatt { get; set; }
-public System.Boolean ShowZETOstIzuch { get; set; }
-public System.Boolean ShowHoursPereatt { get; set; }
-public System.Boolean ShowHoursOstIzuch { get; set; }
-public System.Boolean ShowZETIm { get; set; }
-public System.Boolean ShowHItogIm { get; set; }
-public System.Boolean ShowHKontactIm { get; set; }
-public System.Boolean ShowHAudIm { get; set; }
-public System.Boolean ShowHInterIm { get; set; }
-public System.Boolean ShowHDistIm { get; set; }
-public System.Boolean ViewHinWeek { get; set; }
-public System.Boolean FlagSaveParamView { get; set; }
-public System.Boolean IsEqualsDV { get; set; }
-public System.Boolean IsNotEqualsVZ { get; set; }
-public System.Boolean IsNotEqualsCtrl { get; set; }
-public System.Boolean IsNotEqualsOther { get; set; }
-public System.Boolean IsSetEquals { get; set; }
-public System.Int32 NormHoursEx { get; set; }
-public System.Int32 NormHoursZ { get; set; }
-public System.Int32 NormHoursZo { get; set; }
-public System.Boolean ZETDiscMinNotDB { get; set; }
-public System.Boolean ZETDiscMinNotRazdel { get; set; }
-public System.Boolean FlagKRAll { get; set; }
-public System.Boolean FlagKPAll { get; set; }
-public System.Int32 KRAllCount { get; set; }
-public System.Int32 KPAllCount { get; set; }
-public System.Boolean FlagKRYear { get; set; }
-public System.Boolean FlagKPYear { get; set; }
-public System.Boolean FlagKRSem { get; set; }
-public System.Boolean FlagKPSem { get; set; }
-public System.Int32 KRSemCount { get; set; }
-public System.Int32 KPSemCount { get; set; }
-public System.Boolean KontSemSelect { get; set; }
-public System.Boolean IsEqualsCmpt { get; set; }
-public System.Boolean IsNotEqualsOK { get; set; }
-public System.Boolean IsNotEqualsOPK { get; set; }
-public System.Boolean IsNotEqualsPK { get; set; }
-public System.Boolean FlagAssistKanik { get; set; }
-public System.Boolean Flag_CntrlHasHoursItogWithMod { get; set; }
-public System.Boolean FlagVisibleAudN { get; set; }
-public System.Boolean IsNotIncludePhizk { get; set; }
-public System.Boolean IsNotIncludeFacult { get; set; }
-public System.Boolean IsEqualsPersons { get; set; }
-public System.Boolean DifPrInTabPract { get; set; }
-public System.Boolean DifPrInSes { get; set; }
-public System.Boolean OnlyGinGYP { get; set; }
-public System.Boolean YPrWithTO { get; set; }
-public System.Boolean IsWithoutZE { get; set; }
-public System.Int32 UpdIndex { get; set; }
-public System.Boolean GIAforProfil { get; set; }
-public System.Boolean CmptWithoutGIA { get; set; }
-public System.Boolean ElectDiscInBasePart { get; set; }
-public System.Boolean IsEqualsProfSt { get; set; }
-public System.Int32 SesViewOption { get; set; }
-public System.Boolean FlagLecOP { get; set; }
-public System.Int32 MaxLecOP { get; set; }
-public System.Boolean FlagSemOP { get; set; }
-public System.Int32 MaxSemOP { get; set; }
-public System.Boolean NoCmptInHeadDVB { get; set; }
-public System.Int32 TypeHours { get; set; }
-public System.Boolean FlagIsFacult { get; set; }
-public System.Boolean FlagCmptPractics { get; set; }
-public System.Boolean FlagMinBase { get; set; }
-public System.Int32 MinPercBase { get; set; }
-public System.Boolean Flag_OOPYearNew { get; set; }
-public System.Int32 OOPYearNew { get; set; }
-}
+    public class ПараметрыПлана
+    {
+        public string id { get; set; }
+        public int rowOrder { get; set; }
+        public string hasChanges { get; set; }
+        public int КодПлана { get; set; }
+        public int count { get; set; }
+        public bool Flag_FillTitle { get; set; }
+        public bool Flag_SrokO { get; set; }
+        public int SrokOYear { get; set; }
+        public int SrokOMonth { get; set; }
+        public bool Flag_OOPItog { get; set; }
+        public int OOPItog { get; set; }
+        public bool Flag_OOPyear { get; set; }
+        public int OOPyear { get; set; }
+        public bool Flag_ZETdelta { get; set; }
+        public bool Flag_DVVpersent { get; set; }
+        public bool Flag_DVVpersent1p3 { get; set; }
+        public int DVVpersent30Min { get; set; }
+        public int DVVpersent30Max { get; set; }
+        public bool Flag_BasePart { get; set; }
+        public int BasePartMin { get; set; }
+        public int BasePartMax { get; set; }
+        public bool Flag_ZETDiscMin { get; set; }
+        public int ZETDiscMin { get; set; }
+        public bool Flag_DiscZETIsInt { get; set; }
+        public bool Flag_DiscZETYearIsInt { get; set; }
+        public bool Flag_ZETExpertTrue { get; set; }
+        public bool Flag_DiscZETExpertTrue { get; set; }
+        public bool Flag_HinW54 { get; set; }
+        public int HinW54 { get; set; }
+        public bool Flag_HinWAudit { get; set; }
+        public int HinWAuditMin { get; set; }
+        public int HinWAuditMax { get; set; }
+        public bool Flag_HinWAuditSr { get; set; }
+        public int HinWAuditSrMin { get; set; }
+        public int HinWAuditSrMax { get; set; }
+        public bool Flag_Lect { get; set; }
+        public int LectMin { get; set; }
+        public int LectMax { get; set; }
+        public bool Flag_Inter { get; set; }
+        public int InterMin { get; set; }
+        public int InterMax { get; set; }
+        public bool Flag_ZETAndHoursIsTrue { get; set; }
+        public bool Flag_DiscZETAndHoursIsTrue { get; set; }
+        public bool Flag_DiscSemZETAndHoursIsTrue { get; set; }
+        public bool Flag_AuditAll { get; set; }
+        public int AuditAllMin { get; set; }
+        public int AudetAllMax { get; set; }
+        public bool Flag_EqZET36 { get; set; }
+        public int EqZET36 { get; set; }
+        public bool Flag_EqZETDis32_38 { get; set; }
+        public bool Flag_CntrlEx { get; set; }
+        public int CntrlExMin { get; set; }
+        public int CntrlExMax { get; set; }
+        public bool Flag_CntrlExSem { get; set; }
+        public int CntrlExSemMax { get; set; }
+        public bool Flag_CntrlZach { get; set; }
+        public int CntrlZachMin { get; set; }
+        public int CntrlZachMax { get; set; }
+        public bool Flag_CntrlZachSem { get; set; }
+        public int CntrlZachSemMax { get; set; }
+        public bool Flag_CntrlKP { get; set; }
+        public int CntrlKPMax { get; set; }
+        public bool Flag_CntrlKR { get; set; }
+        public int CntrlKRMax { get; set; }
+        public bool Flag_CntrlExHours { get; set; }
+        public int CntrlExHoursMin { get; set; }
+        public int CntrlExHoursMax { get; set; }
+        public bool Flag_CntrlHasHours { get; set; }
+        public bool Flag_CntrlHasHoursItogS { get; set; }
+        public bool Flag_HoursCouple { get; set; }
+        public bool Flag_HoursKratNed { get; set; }
+        public bool Flag_HoursKratNedFirstPos { get; set; }
+        public bool Flag_HoursKSRForKR { get; set; }
+        public int HoursKSRForKRMin { get; set; }
+        public int HoursKSRForKRMax { get; set; }
+        public bool Flag_HoursKSRForKP { get; set; }
+        public int HoursKSRForKPMin { get; set; }
+        public int HoursKSRForKPMax { get; set; }
+        public bool Flag_HoursKSRpSRS { get; set; }
+        public int HoursKSRpSRSMin { get; set; }
+        public int HoursKSRpSRSMax { get; set; }
+        public bool Flag_HoursAudSemTrue { get; set; }
+        public bool Flag_HoursAudSemTrueWithKSR { get; set; }
+        public bool Flag_HoursSRSSemTrue { get; set; }
+        public bool Flag_HoursSRSSemTrueWithKSR { get; set; }
+        public bool Flag_PracticsWeeksCorrrect { get; set; }
+        public bool Flag_HolidaysWeeks { get; set; }
+        public int HolidaysWeeksMin { get; set; }
+        public int HolidaysWeeksMax { get; set; }
+        public bool Flag_HolidaysWinterWeeks { get; set; }
+        public int HolidaysWinterWeeksMin { get; set; }
+        public int HolidaysWinterWeeksMax { get; set; }
+        public bool Flag_DiscAltTrue { get; set; }
+        public bool Flag_DiscDiscMust { get; set; }
+        public bool Flag_DiscCompTrue { get; set; }
+        public bool Flag_DiscCompDBTrue { get; set; }
+        public bool Flag_DiscCompHandMadeTrue { get; set; }
+        public int DiscCompHandMadeOK { get; set; }
+        public int DiscCompHandMadePK { get; set; }
+        public bool Flag_BaseDiscCompTrue { get; set; }
+        public bool Flag_DiscMinOneCompTrue { get; set; }
+        public bool Flag_DiscFatalCoincidence { get; set; }
+        public bool Flag_DiscKafTrue { get; set; }
+        public bool Flag_DiscPhysCZET { get; set; }
+        public int DiscPhysCZET { get; set; }
+        public bool Flag_DiscPhysCHours { get; set; }
+        public int DiscPhysCHours { get; set; }
+        public bool Flag_DiscPhysCHoursPractices { get; set; }
+        public int DiscPhysCHoursPractices { get; set; }
+        public bool Flag_DiscJustificationZETLocationForCourses { get; set; }
+        public int DiscJustificationZETLocationForCoursesPosition { get; set; }
+        public int DiscJustificationZETLocationForCoursesOneZET { get; set; }
+        public bool Flag_ZET_Pereat { get; set; }
+        public int ZET_Pereat { get; set; }
+        public int HinWEx54 { get; set; }
+        public bool ShowIndex { get; set; }
+        public bool ShowCmpt { get; set; }
+        public bool ShowKafCode { get; set; }
+        public bool ShowZETExp { get; set; }
+        public bool ShowZETFact { get; set; }
+        public bool ShowHinZET { get; set; }
+        public bool ShowHFromZET { get; set; }
+        public bool ShowHFromPlan { get; set; }
+        public bool ShowItogoKontact { get; set; }
+        public bool ShowItogoAud { get; set; }
+        public bool ShowItogoSRS { get; set; }
+        public bool ShowItogoCtrl { get; set; }
+        public bool ShowItogoInter { get; set; }
+        public bool ShowItogoDist { get; set; }
+        public bool ShowKafName { get; set; }
+        public bool ShowZETPereatt { get; set; }
+        public bool ShowZETOstIzuch { get; set; }
+        public bool ShowHoursPereatt { get; set; }
+        public bool ShowHoursOstIzuch { get; set; }
+        public bool ShowZETIm { get; set; }
+        public bool ShowHItogIm { get; set; }
+        public bool ShowHKontactIm { get; set; }
+        public bool ShowHAudIm { get; set; }
+        public bool ShowHInterIm { get; set; }
+        public bool ShowHDistIm { get; set; }
+        public bool ViewHinWeek { get; set; }
+        public bool FlagSaveParamView { get; set; }
+        public bool IsEqualsDV { get; set; }
+        public bool IsNotEqualsVZ { get; set; }
+        public bool IsNotEqualsCtrl { get; set; }
+        public bool IsNotEqualsOther { get; set; }
+        public bool IsSetEquals { get; set; }
+        public int NormHoursEx { get; set; }
+        public int NormHoursZ { get; set; }
+        public int NormHoursZo { get; set; }
+        public bool ZETDiscMinNotDB { get; set; }
+        public bool ZETDiscMinNotRazdel { get; set; }
+        public bool FlagKRAll { get; set; }
+        public bool FlagKPAll { get; set; }
+        public int KRAllCount { get; set; }
+        public int KPAllCount { get; set; }
+        public bool FlagKRYear { get; set; }
+        public bool FlagKPYear { get; set; }
+        public bool FlagKRSem { get; set; }
+        public bool FlagKPSem { get; set; }
+        public int KRSemCount { get; set; }
+        public int KPSemCount { get; set; }
+        public bool KontSemSelect { get; set; }
+        public bool IsEqualsCmpt { get; set; }
+        public bool IsNotEqualsOK { get; set; }
+        public bool IsNotEqualsOPK { get; set; }
+        public bool IsNotEqualsPK { get; set; }
+        public bool FlagAssistKanik { get; set; }
+        public bool Flag_CntrlHasHoursItogWithMod { get; set; }
+        public bool FlagVisibleAudN { get; set; }
+        public bool IsNotIncludePhizk { get; set; }
+        public bool IsNotIncludeFacult { get; set; }
+        public bool IsEqualsPersons { get; set; }
+        public bool DifPrInTabPract { get; set; }
+        public bool DifPrInSes { get; set; }
+        public bool OnlyGinGYP { get; set; }
+        public bool YPrWithTO { get; set; }
+        public bool IsWithoutZE { get; set; }
+        public int UpdIndex { get; set; }
+        public bool GIAforProfil { get; set; }
+        public bool CmptWithoutGIA { get; set; }
+        public bool ElectDiscInBasePart { get; set; }
+        public bool IsEqualsProfSt { get; set; }
+        public int SesViewOption { get; set; }
+        public bool FlagLecOP { get; set; }
+        public int MaxLecOP { get; set; }
+        public bool FlagSemOP { get; set; }
+        public int MaxSemOP { get; set; }
+        public bool NoCmptInHeadDVB { get; set; }
+        public int TypeHours { get; set; }
+        public bool FlagIsFacult { get; set; }
+        public bool FlagCmptPractics { get; set; }
+        public bool FlagMinBase { get; set; }
+        public int MinPercBase { get; set; }
+        public bool Flag_OOPYearNew { get; set; }
+        public int OOPYearNew { get; set; }
+    }
 }

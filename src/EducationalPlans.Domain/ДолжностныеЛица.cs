@@ -1,13 +1,13 @@
-namespace EducationalPlans.Domain 
+namespace EducationalPlans.Domain
 {
- public class ДолжностныеЛица 
-{
-public System.String id { get; set; }
-public System.Int32 rowOrder { get; set; }
-public System.String hasChanges { get; set; }
-public System.Int32 Код { get; set; }
-public System.String ФИО { get; set; }
-public System.String Должность { get; set; }
-public System.String Звание { get; set; }
-}
+    public class ДолжностныеЛица
+    {
+        public string id { get; set; }
+        public int rowOrder { get; set; }
+        public string hasChanges { get; set; }
+        public int Код { get; set; }
+        public string ФИО { get; set; }
+        public string Должность { get; set; }
+        public string Звание { get; set; }
+    }
 }

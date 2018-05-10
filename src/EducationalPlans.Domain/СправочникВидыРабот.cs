@@ -1,18 +1,18 @@
-namespace EducationalPlans.Domain 
+namespace EducationalPlans.Domain
 {
- public class СправочникВидыРабот 
-{
-public System.String id { get; set; }
-public System.Int32 rowOrder { get; set; }
-public System.String hasChanges { get; set; }
-public System.Int32 Код { get; set; }
-public System.String Название { get; set; }
-public System.Int32 КодТипРабот { get; set; }
-public System.String Аббревиатура { get; set; }
-public System.Boolean Контактный { get; set; }
-public System.Boolean Аудиторный { get; set; }
-public System.Boolean Отображать { get; set; }
-public System.Boolean HasInter { get; set; }
-public System.Boolean HasDistr { get; set; }
-}
+    public class СправочникВидыРабот
+    {
+        public string id { get; set; }
+        public int rowOrder { get; set; }
+        public string hasChanges { get; set; }
+        public int Код { get; set; }
+        public string Название { get; set; }
+        public int КодТипРабот { get; set; }
+        public string Аббревиатура { get; set; }
+        public bool Контактный { get; set; }
+        public bool Аудиторный { get; set; }
+        public bool Отображать { get; set; }
+        public bool HasInter { get; set; }
+        public bool HasDistr { get; set; }
+    }
 }
