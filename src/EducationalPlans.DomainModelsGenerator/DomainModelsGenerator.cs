@@ -41,7 +41,7 @@ namespace EducationalPlans.DomainModelsGenerator
 
         private void SearchElementsAndGenerateModel(XElement xElement)
         {
-            var xElements = xElement.Elements();
+            var xElements = xElement.Elements().OrderByDescending(element => element.Attributes().Count());
 
             foreach (var element in xElements)
             {
@@ -95,7 +95,7 @@ namespace EducationalPlans.DomainModelsGenerator
         {
             var join = string.Join("", properties.Select(p => p + $"{Environment.NewLine}"));
 
-            return $"namespace EducationalPlans.Domain {Environment.NewLine}" + "{" +
+            return $"namespace EducationalPlans.Domain.New {Environment.NewLine}" + "{" +
                    $"{Environment.NewLine} public class {className} {Environment.NewLine}" + "{" + Environment.NewLine +
                    join + "}" + Environment.NewLine + "}";
         }

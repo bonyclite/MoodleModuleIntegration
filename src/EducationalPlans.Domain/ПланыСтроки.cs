@@ -10,6 +10,7 @@ namespace EducationalPlans.Domain
         public int КодООП { get; set; }
         public int КодБлока { get; set; }
         public int КодКафедры { get; set; }
+        public int КодРодителя { get; set; }
         public string Дисциплина { get; set; }
         public int ТипОбъекта { get; set; }
         public int ВидОбъекта { get; set; }

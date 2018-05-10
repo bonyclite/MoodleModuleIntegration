@@ -6,6 +6,7 @@ namespace EducationalPlans.Domain
         public int rowOrder { get; set; }
         public string hasChanges { get; set; }
         public int Код { get; set; }
+        public int КодРодителя { get; set; }
         public int КодПлана { get; set; }
         public int ТипБлока { get; set; }
         public int ТипОбъекта { get; set; }
