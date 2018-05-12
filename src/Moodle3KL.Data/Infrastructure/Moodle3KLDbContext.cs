@@ -1,9 +1,12 @@
-﻿using System.Data.Entity;
+﻿using System.Data.Common;
+using System.Data.Entity;
 
 using Moodle3KL.Domain;
+using MySql.Data.Entity;
 
 namespace Moodle3KL.Data.Infrastructure
 {
+    [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class Moodle3KLDbContext : DbContext
     {
         public Moodle3KLDbContext() : base(AppConfig.MoodleDecanatConnectionString)
