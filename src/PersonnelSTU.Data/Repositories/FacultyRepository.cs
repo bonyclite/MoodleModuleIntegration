@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Common.Data.Infrastructure;
 using Common.Data.Repositories;
-using PersonnelSTU.Data.Infrastructure;
 using PersonnelSTU.Domain;
 
 namespace PersonnelSTU.Data.Repositories
@@ -13,9 +9,9 @@ namespace PersonnelSTU.Data.Repositories
 
     }
 
-    public class FacultyRepository : PersonnelStuEntityRepositoryBase<Faculty>, IFacultyRepository
+    public class FacultyRepository : EntityRepositoryBase<Faculty>, IFacultyRepository
     {
-        public FacultyRepository(IPersonnelStuDbFactory dbFactory) : base(dbFactory)
+        public FacultyRepository(IDbFactory dbFactory) : base(dbFactory)
         {
         }
     }

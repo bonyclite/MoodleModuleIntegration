@@ -67,7 +67,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\FacultyRepository.cs" />
     <Compile Include="Repositories\GroupRepository.cs" />
-    <Compile Include="Repositories\PersonnelStuEntityRepositoryBase.cs" />
     <Compile Include="Repositories\PersonRepository.cs" />
     <Compile Include="Repositories\SpecialtyRepository.cs" />
     <Compile Include="Repositories\StudentStateRepository.cs" />

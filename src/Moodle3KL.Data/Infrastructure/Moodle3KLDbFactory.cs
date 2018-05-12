@@ -2,16 +2,15 @@
 
 namespace Moodle3KL.Data.Infrastructure
 {
-    public interface IMoodle3KLDbFactory : IDbFactory
+    public class Moodle3KLDbFactory : DbFactoryBase
     {
-
-    }
-
-    public class Moodle3KLDbFactory : IMoodle3KLDbFactory
-    {
-        public IDbContext Get()
+        protected override IDbContext Create()
         {
-            return new DbContextAdapter(new Moodle3KLDbContext());
+            var sdfsd = AppConfig.MoodleDecanatConnectionString;
+            var moodle3KlDbContext = new Moodle3KLDbContext();
+            //moodle3KlDbContext.Database.Connection.Open();
+
+            return new DbContextAdapter(moodle3KlDbContext);
         }
     }
 }

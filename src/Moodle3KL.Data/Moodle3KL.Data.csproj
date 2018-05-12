@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Infrastructure\AppConfig.cs" />
     <Compile Include="Infrastructure\Moodle3KLDbContext.cs" />
     <Compile Include="Infrastructure\Moodle3KLDbFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,7 +96,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

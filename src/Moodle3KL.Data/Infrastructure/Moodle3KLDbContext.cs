@@ -6,10 +6,10 @@ namespace Moodle3KL.Data.Infrastructure
 {
     public class Moodle3KLDbContext : DbContext
     {
-        public Moodle3KLDbContext() : base("name=moodledecanatEntities")
+        public Moodle3KLDbContext() : base(AppConfig.MoodleDecanatConnectionString)
         {
         }
-        
+
         public virtual DbSet<mdl_assign> mdl_assign { get; set; }
         public virtual DbSet<mdl_assign_grades> mdl_assign_grades { get; set; }
         public virtual DbSet<mdl_assign_plugin_config> mdl_assign_plugin_config { get; set; }
