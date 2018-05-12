@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_data_fields : mdl_entity_base {
+    public class mdl_data_fields : mdl_entity_base
+    {
         public long dataid { get; set; }
         public string type { get; set; }
         public string name { get; set; }

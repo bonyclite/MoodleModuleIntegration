@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_lti_tool_proxies : mdl_entity_base {
+    public class mdl_lti_tool_proxies : mdl_entity_base
+    {
         public string name { get; set; }
         public string regurl { get; set; }
         public short state { get; set; }

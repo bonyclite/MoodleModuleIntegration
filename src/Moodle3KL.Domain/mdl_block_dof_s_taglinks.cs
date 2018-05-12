@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_taglinks : mdl_entity_base {
+    public class mdl_block_dof_s_taglinks : mdl_entity_base
+    {
         public long tagid { get; set; }
         public string plugintype { get; set; }
         public string plugincode { get; set; }

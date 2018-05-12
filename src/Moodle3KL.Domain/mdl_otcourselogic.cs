@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_otcourselogic : mdl_entity_base {
+    public class mdl_otcourselogic : mdl_entity_base
+    {
         public long course { get; set; }
         public string name { get; set; }
         public string activecond { get; set; }

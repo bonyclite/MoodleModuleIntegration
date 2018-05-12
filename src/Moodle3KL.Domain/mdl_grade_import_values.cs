@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_grade_import_values : mdl_entity_base {
+    public class mdl_grade_import_values : mdl_entity_base
+    {
         public long? itemid { get; set; }
         public long? newgradeitem { get; set; }
         public long userid { get; set; }

@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_qtype_ordering_options : mdl_entity_base {
+    public class mdl_qtype_ordering_options : mdl_entity_base
+    {
         public long questionid { get; set; }
         public short layouttype { get; set; }
         public short selecttype { get; set; }

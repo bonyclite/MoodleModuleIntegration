@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_sessions : mdl_entity_base {
+    public class mdl_sessions : mdl_entity_base
+    {
         public long state { get; set; }
         public string sid { get; set; }
         public long userid { get; set; }

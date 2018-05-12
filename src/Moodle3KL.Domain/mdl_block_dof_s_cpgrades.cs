@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_cpgrades : mdl_entity_base {
+    public class mdl_block_dof_s_cpgrades : mdl_entity_base
+    {
         public long? cpassedid { get; set; }
         public long? planid { get; set; }
         public string grade { get; set; }

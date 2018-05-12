@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_feedback_item : mdl_entity_base {
+    public class mdl_feedback_item : mdl_entity_base
+    {
         public long feedback { get; set; }
         public long template { get; set; }
         public string name { get; set; }

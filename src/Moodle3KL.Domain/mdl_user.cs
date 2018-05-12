@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_user : mdl_entity_base {
+    public class mdl_user : mdl_entity_base
+    {
         public string auth { get; set; }
         public short confirmed { get; set; }
         public short policyagreed { get; set; }

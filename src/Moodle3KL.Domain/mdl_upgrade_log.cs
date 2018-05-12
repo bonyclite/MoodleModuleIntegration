@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_upgrade_log : mdl_entity_base {
+    public class mdl_upgrade_log : mdl_entity_base
+    {
         public long type { get; set; }
         public string plugin { get; set; }
         public string version { get; set; }

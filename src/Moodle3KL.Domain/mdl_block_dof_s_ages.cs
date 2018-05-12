@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_ages : mdl_entity_base {
+    public class mdl_block_dof_s_ages : mdl_entity_base
+    {
         public string name { get; set; }
         public long? begindate { get; set; }
         public long? enddate { get; set; }

@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_competency_framework : mdl_entity_base {
+    public class mdl_competency_framework : mdl_entity_base
+    {
         public string shortname { get; set; }
         public long contextid { get; set; }
         public string idnumber { get; set; }

@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_mnet_session : mdl_entity_base {
+    public class mdl_mnet_session : mdl_entity_base
+    {
         public long userid { get; set; }
         public string username { get; set; }
         public string token { get; set; }

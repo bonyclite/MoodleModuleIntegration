@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_mnet_host : mdl_entity_base {
+    public class mdl_mnet_host : mdl_entity_base
+    {
         public short deleted { get; set; }
         public string wwwroot { get; set; }
         public string ip_address { get; set; }

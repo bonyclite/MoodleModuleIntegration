@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_lti_submission : mdl_entity_base {
+    public class mdl_lti_submission : mdl_entity_base
+    {
         public long ltiid { get; set; }
         public long userid { get; set; }
         public long datesubmitted { get; set; }

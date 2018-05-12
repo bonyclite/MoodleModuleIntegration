@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_schtemplates : mdl_entity_base {
+    public class mdl_block_dof_s_schtemplates : mdl_entity_base
+    {
         public long? cstreamid { get; set; }
         public short? daynum { get; set; }
         public short? dayvar { get; set; }

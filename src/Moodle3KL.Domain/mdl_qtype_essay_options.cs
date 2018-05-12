@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_qtype_essay_options : mdl_entity_base {
+    public class mdl_qtype_essay_options : mdl_entity_base
+    {
         public long questionid { get; set; }
         public string responseformat { get; set; }
         public short responserequired { get; set; }

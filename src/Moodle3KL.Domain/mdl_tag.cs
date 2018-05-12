@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_tag : mdl_entity_base {
+    public class mdl_tag : mdl_entity_base
+    {
         public long userid { get; set; }
         public long tagcollid { get; set; }
         public string name { get; set; }

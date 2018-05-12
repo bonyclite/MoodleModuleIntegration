@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_book_chapters : mdl_entity_base {
+    public class mdl_book_chapters : mdl_entity_base
+    {
         public long bookid { get; set; }
         public long pagenum { get; set; }
         public long subchapter { get; set; }

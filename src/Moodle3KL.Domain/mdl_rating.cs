@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_rating : mdl_entity_base {
+    public class mdl_rating : mdl_entity_base
+    {
         public long contextid { get; set; }
         public string component { get; set; }
         public string ratingarea { get; set; }

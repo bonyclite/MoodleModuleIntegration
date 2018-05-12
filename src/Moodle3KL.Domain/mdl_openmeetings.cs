@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_openmeetings : mdl_entity_base {
+    public class mdl_openmeetings : mdl_entity_base
+    {
         public long course { get; set; }
         public long teacher { get; set; }
         public string type { get; set; }

@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_local_intelliboard_totals : mdl_entity_base {
+    public class mdl_local_intelliboard_totals : mdl_entity_base
+    {
         public long? sessions { get; set; }
         public long? courses { get; set; }
         public long? visits { get; set; }

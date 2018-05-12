@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_hotpot_attempts : mdl_entity_base {
+    public class mdl_hotpot_attempts : mdl_entity_base
+    {
         public long hotpotid { get; set; }
         public long userid { get; set; }
         public long starttime { get; set; }

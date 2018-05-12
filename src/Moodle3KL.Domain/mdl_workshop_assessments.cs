@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_workshop_assessments : mdl_entity_base {
+    public class mdl_workshop_assessments : mdl_entity_base
+    {
         public long submissionid { get; set; }
         public long reviewerid { get; set; }
         public long weight { get; set; }

@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_educations : mdl_entity_base {
+    public class mdl_block_dof_s_educations : mdl_entity_base
+    {
         public long personid { get; set; }
         public long? organizationid { get; set; }
         public long? edulevel { get; set; }

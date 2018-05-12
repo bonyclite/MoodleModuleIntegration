@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_enrol_otpay : mdl_entity_base {
+    public class mdl_enrol_otpay : mdl_entity_base
+    {
         public string paymentid { get; set; }
         public string externalpaymentid { get; set; }
         public long instanceid { get; set; }

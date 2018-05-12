@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_question_categories : mdl_entity_base {
+    public class mdl_question_categories : mdl_entity_base
+    {
         public string name { get; set; }
         public long contextid { get; set; }
         public string info { get; set; }

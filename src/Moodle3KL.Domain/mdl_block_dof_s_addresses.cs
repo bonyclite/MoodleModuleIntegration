@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_addresses : mdl_entity_base {
+    public class mdl_block_dof_s_addresses : mdl_entity_base
+    {
         public short? type { get; set; }
         public string postalcode { get; set; }
         public string country { get; set; }

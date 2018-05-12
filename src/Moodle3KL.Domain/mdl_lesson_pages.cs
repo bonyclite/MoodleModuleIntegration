@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_lesson_pages : mdl_entity_base {
+    public class mdl_lesson_pages : mdl_entity_base
+    {
         public long lessonid { get; set; }
         public long prevpageid { get; set; }
         public long nextpageid { get; set; }

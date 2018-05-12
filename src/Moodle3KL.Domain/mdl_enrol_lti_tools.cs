@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_enrol_lti_tools : mdl_entity_base {
+    public class mdl_enrol_lti_tools : mdl_entity_base
+    {
         public long enrolid { get; set; }
         public long contextid { get; set; }
         public string institution { get; set; }

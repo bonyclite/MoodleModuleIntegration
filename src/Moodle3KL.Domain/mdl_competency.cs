@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_competency : mdl_entity_base {
+    public class mdl_competency : mdl_entity_base
+    {
         public string shortname { get; set; }
         public string description { get; set; }
         public short descriptionformat { get; set; }

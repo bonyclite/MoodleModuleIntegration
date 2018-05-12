@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_message : mdl_entity_base {
+    public class mdl_message : mdl_entity_base
+    {
         public long useridfrom { get; set; }
         public long useridto { get; set; }
         public string subject { get; set; }

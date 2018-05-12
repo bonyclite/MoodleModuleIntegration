@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_plagiarism_rucont_files : mdl_entity_base {
+    public class mdl_plagiarism_rucont_files : mdl_entity_base
+    {
         public long cm { get; set; }
         public long userid { get; set; }
         public string identifier { get; set; }

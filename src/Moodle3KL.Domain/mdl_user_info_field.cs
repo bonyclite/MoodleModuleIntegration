@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_user_info_field : mdl_entity_base {
+    public class mdl_user_info_field : mdl_entity_base
+    {
         public string shortname { get; set; }
         public string name { get; set; }
         public string datatype { get; set; }

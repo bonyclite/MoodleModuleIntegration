@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_configurable_reports : mdl_entity_base {
+    public class mdl_block_configurable_reports : mdl_entity_base
+    {
         public long courseid { get; set; }
         public long ownerid { get; set; }
         public short visible { get; set; }

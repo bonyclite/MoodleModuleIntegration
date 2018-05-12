@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_data_content : mdl_entity_base {
+    public class mdl_data_content : mdl_entity_base
+    {
         public long fieldid { get; set; }
         public long recordid { get; set; }
         public string content { get; set; }

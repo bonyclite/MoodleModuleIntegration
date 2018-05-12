@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_wiki_pages : mdl_entity_base {
+    public class mdl_wiki_pages : mdl_entity_base
+    {
         public long subwikiid { get; set; }
         public string title { get; set; }
         public string cachedcontent { get; set; }

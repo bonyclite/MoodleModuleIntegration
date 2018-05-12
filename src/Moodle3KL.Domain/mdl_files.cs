@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_files : mdl_entity_base {
+    public class mdl_files : mdl_entity_base
+    {
         public string contenthash { get; set; }
         public string pathnamehash { get; set; }
         public long contextid { get; set; }

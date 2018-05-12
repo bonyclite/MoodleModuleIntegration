@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_achievementins : mdl_entity_base {
+    public class mdl_block_dof_s_achievementins : mdl_entity_base
+    {
         public long achievementid { get; set; }
         public long userid { get; set; }
         public long? moderatorid { get; set; }

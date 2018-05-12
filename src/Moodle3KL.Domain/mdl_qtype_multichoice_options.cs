@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_qtype_multichoice_options : mdl_entity_base {
+    public class mdl_qtype_multichoice_options : mdl_entity_base
+    {
         public long questionid { get; set; }
         public short layout { get; set; }
         public short single { get; set; }

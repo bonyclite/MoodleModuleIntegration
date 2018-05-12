@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_simplecertificate_issues : mdl_entity_base {
+    public class mdl_simplecertificate_issues : mdl_entity_base
+    {
         public long certificateid { get; set; }
         public long userid { get; set; }
         public string certificatename { get; set; }

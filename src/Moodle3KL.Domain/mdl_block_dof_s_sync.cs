@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_sync : mdl_entity_base {
+    public class mdl_block_dof_s_sync : mdl_entity_base
+    {
         public string downptype { get; set; }
         public string downpcode { get; set; }
         public string downsubstorage { get; set; }

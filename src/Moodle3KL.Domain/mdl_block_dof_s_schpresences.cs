@@ -1,6 +1,7 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_schpresences : mdl_entity_base {
+    public class mdl_block_dof_s_schpresences : mdl_entity_base
+    {
         public long? eventid { get; set; }
         public long? personid { get; set; }
         public string present { get; set; }
