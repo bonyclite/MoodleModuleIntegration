@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using Moodle3KL.Domain;
+
 namespace Moodle3KL.Data
 {
     using System;
