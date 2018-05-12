@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_offlinequiz_groups
-    {
-        public long id { get; set; }
+    public class mdl_offlinequiz_groups : mdl_entity_base {
         public long offlinequizid { get; set; }
         public short number { get; set; }
         public decimal sumgrades { get; set; }

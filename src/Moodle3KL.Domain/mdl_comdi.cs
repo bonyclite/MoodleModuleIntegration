@@ -2,9 +2,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Moodle3KL.Domain
 {
-    public class mdl_comdi
-    {
-        public long id { get; set; }
+    public class mdl_comdi : mdl_entity_base {
         public long course { get; set; }
         public long teacher { get; set; }
         public long type { get; set; }

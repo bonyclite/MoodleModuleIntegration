@@ -5,6 +5,7 @@ using System.Web.Routing;
 using Autofac;
 using Autofac.Builder;
 using Autofac.Integration.Mvc;
+using Moodle3KL.Data;
 
 [assembly: PreApplicationStartMethod(typeof(StudentCard.Web.UI.App.AppStart), nameof(StudentCard.Web.UI.App.AppStart.Start))]
 namespace StudentCard.Web.UI.App
@@ -24,6 +25,7 @@ namespace StudentCard.Web.UI.App
         {
             base.RegisterTypes(builder);
 
+            Bootstrapper.RegisterTypes(builder, LifetimeScopeConfigurator);
             builder.RegisterControllers(typeof(AppStart).Assembly).PropertiesAutowired();
         }
 

@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_grading_definitions
-    {
-        public long id { get; set; }
+    public class mdl_grading_definitions : mdl_entity_base {
         public long areaid { get; set; }
         public string method { get; set; }
         public string name { get; set; }

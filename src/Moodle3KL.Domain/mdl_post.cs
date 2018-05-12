@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_post
-    {
-        public long id { get; set; }
+    public class mdl_post : mdl_entity_base {
         public string module { get; set; }
         public long userid { get; set; }
         public long courseid { get; set; }

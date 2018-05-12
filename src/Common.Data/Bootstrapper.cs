@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Autofac;
 using Autofac.Builder;
 using Common.Data.Infrastructure;
+using Common.Data.Repositories;
 
 namespace Common.Data
 {
@@ -13,6 +11,7 @@ namespace Common.Data
         public static void RegisterTypes(ContainerBuilder builder, Func<IRegistrationBuilder<object, object, object>, IRegistrationBuilder<object, object, object>> lifetimeScopeConfigurator)
         {
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().ApplyDefaultConfiguration(lifetimeScopeConfigurator);
+            builder.RegisterGeneric(typeof(EntityRepositoryBase<>)).As(typeof(IEntityRepository<>)).ApplyDefaultConfiguration(lifetimeScopeConfigurator);
         }
     }
 

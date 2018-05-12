@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_tool_customlang
-    {
-        public long id { get; set; }
+    public class mdl_tool_customlang : mdl_entity_base {
         public string lang { get; set; }
         public long componentid { get; set; }
         public string stringid { get; set; }

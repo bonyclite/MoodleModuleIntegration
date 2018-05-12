@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_programmsbcs
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_s_programmsbcs : mdl_entity_base {
         public long? contractid { get; set; }
         public long? programmid { get; set; }
         public string edutype { get; set; }

@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_course_completion_criteria
-    {
-        public long id { get; set; }
+    public class mdl_course_completion_criteria : mdl_entity_base {
         public long course { get; set; }
         public long criteriatype { get; set; }
         public string module { get; set; }

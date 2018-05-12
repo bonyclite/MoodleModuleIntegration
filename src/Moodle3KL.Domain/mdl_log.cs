@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_log
-    {
-        public long id { get; set; }
+    public class mdl_log : mdl_entity_base {
         public long time { get; set; }
         public long userid { get; set; }
         public string ip { get; set; }

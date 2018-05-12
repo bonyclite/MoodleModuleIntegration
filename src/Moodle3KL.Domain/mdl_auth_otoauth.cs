@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_auth_otoauth
-    {
-        public long id { get; set; }
+    public class mdl_auth_otoauth : mdl_entity_base {
         public long userid { get; set; }
         public string service { get; set; }
         public string remoteuserid { get; set; }

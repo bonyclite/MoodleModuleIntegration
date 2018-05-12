@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_user_private_key
-    {
-        public long id { get; set; }
+    public class mdl_user_private_key : mdl_entity_base {
         public string script { get; set; }
         public string value { get; set; }
         public long userid { get; set; }

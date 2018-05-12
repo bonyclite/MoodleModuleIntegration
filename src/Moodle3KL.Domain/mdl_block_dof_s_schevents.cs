@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_schevents
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_s_schevents : mdl_entity_base {
         public long? templateid { get; set; }
         public long? dayid { get; set; }
         public long? planid { get; set; }

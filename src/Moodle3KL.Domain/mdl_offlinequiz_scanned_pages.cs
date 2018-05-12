@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_offlinequiz_scanned_pages
-    {
-        public long id { get; set; }
+    public class mdl_offlinequiz_scanned_pages : mdl_entity_base {
         public long offlinequizid { get; set; }
         public long? resultid { get; set; }
         public string filename { get; set; }

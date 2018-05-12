@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_programmitems
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_s_programmitems : mdl_entity_base {
         public long? programmid { get; set; }
         public long? agenum { get; set; }
         public long? courseclsid { get; set; }

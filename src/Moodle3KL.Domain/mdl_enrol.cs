@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_enrol
-    {
-        public long id { get; set; }
+    public class mdl_enrol : mdl_entity_base {
         public string enrol { get; set; }
         public long status { get; set; }
         public long courseid { get; set; }

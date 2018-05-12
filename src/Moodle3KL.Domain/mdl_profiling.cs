@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_profiling
-    {
-        public long id { get; set; }
+    public class mdl_profiling : mdl_entity_base {
         public string runid { get; set; }
         public string url { get; set; }
         public string data { get; set; }

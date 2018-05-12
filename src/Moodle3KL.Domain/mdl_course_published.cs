@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_course_published
-    {
-        public long id { get; set; }
+    public class mdl_course_published : mdl_entity_base {
         public string huburl { get; set; }
         public long courseid { get; set; }
         public long timepublished { get; set; }

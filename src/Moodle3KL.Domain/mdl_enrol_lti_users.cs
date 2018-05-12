@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_enrol_lti_users
-    {
-        public long id { get; set; }
+    public class mdl_enrol_lti_users : mdl_entity_base {
         public long userid { get; set; }
         public long toolid { get; set; }
         public string serviceurl { get; set; }

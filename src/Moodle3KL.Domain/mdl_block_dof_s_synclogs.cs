@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_synclogs
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_s_synclogs : mdl_entity_base {
         public long syncid { get; set; }
         public long? executetime { get; set; }
         public string operation { get; set; }

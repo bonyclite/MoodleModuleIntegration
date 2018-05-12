@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_external_services
-    {
-        public long id { get; set; }
+    public class mdl_external_services : mdl_entity_base {
         public string name { get; set; }
         public short enabled { get; set; }
         public string requiredcapability { get; set; }

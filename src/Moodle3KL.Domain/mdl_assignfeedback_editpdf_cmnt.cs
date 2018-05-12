@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_assignfeedback_editpdf_cmnt
-    {
-        public long id { get; set; }
+    public class mdl_assignfeedback_editpdf_cmnt : mdl_entity_base {
         public long gradeid { get; set; }
         public long? x { get; set; }
         public long? y { get; set; }

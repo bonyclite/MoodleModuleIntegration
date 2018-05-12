@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_assign_user_flags
-    {
-        public long id { get; set; }
+    public class mdl_assign_user_flags : mdl_entity_base {
         public long userid { get; set; }
         public long assignment { get; set; }
         public long locked { get; set; }

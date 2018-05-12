@@ -17,12 +17,12 @@ namespace Common.Data.Repositories
         IQueryable<TResult> GetMany<TResult>(Expression<Func<TEntity, bool>> where, Expression<Func<TEntity, TResult>> selector);
     }
 
-    public class EntityRepositoryBase<TEntity, TDbFactory> : IEntityRepository<TEntity> where TEntity : class, IEntityBase where TDbFactory : IDbFactory 
+    public class EntityRepositoryBase<TEntity> : IEntityRepository<TEntity> where TEntity : class, IEntityBase
     {
         protected IDbContext DataContext { get; }
         protected DbSet<TEntity> Entities { get; }
 
-        public EntityRepositoryBase(TDbFactory dbFactory)
+        public EntityRepositoryBase(IDbFactory dbFactory)
         {
             DataContext = dbFactory.Get();
             Entities = DataContext.Set<TEntity>();
@@ -51,7 +51,7 @@ namespace Common.Data.Repositories
             return GetAll().Where(where);
         }
 
-        public IQueryable<TResult> GetMany<TResult>(Expression<Func<TEntity, bool>> @where, Expression<Func<TEntity, TResult>> selector)
+        public IQueryable<TResult> GetMany<TResult>(Expression<Func<TEntity, bool>> where, Expression<Func<TEntity, TResult>> selector)
         {
             return GetAll().Where(where).Select(selector);
         }

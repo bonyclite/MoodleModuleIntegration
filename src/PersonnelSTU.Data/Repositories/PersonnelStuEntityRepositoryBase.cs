@@ -8,7 +8,7 @@ using PersonnelSTU.Data.Infrastructure;
 
 namespace PersonnelSTU.Data.Repositories
 {
-    public class PersonnelStuEntityRepositoryBase<TEntityBase> : EntityRepositoryBase<TEntityBase, IPersonnelStuDbFactory> where TEntityBase : EntityBase
+    public class PersonnelStuEntityRepositoryBase<TEntityBase> : EntityRepositoryBase<TEntityBase> where TEntityBase : EntityBase
     {
         public PersonnelStuEntityRepositoryBase(IPersonnelStuDbFactory dbFactory) : base(dbFactory)
         {

@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_workshopallocation_scheduled
-    {
-        public long id { get; set; }
+    public class mdl_workshopallocation_scheduled : mdl_entity_base {
         public long workshopid { get; set; }
         public short enabled { get; set; }
         public long submissionend { get; set; }

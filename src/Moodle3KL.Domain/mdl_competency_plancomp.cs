@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_competency_plancomp
-    {
-        public long id { get; set; }
+    public class mdl_competency_plancomp : mdl_entity_base {
         public long planid { get; set; }
         public long competencyid { get; set; }
         public long? sortorder { get; set; }

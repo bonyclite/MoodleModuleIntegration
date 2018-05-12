@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_cstreams
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_s_cstreams : mdl_entity_base {
         public long? ageid { get; set; }
         public long? programmitemid { get; set; }
         public long? teacherid { get; set; }

@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_hotpot_responses
-    {
-        public long id { get; set; }
+    public class mdl_hotpot_responses : mdl_entity_base {
         public long attemptid { get; set; }
         public long questionid { get; set; }
         public int score { get; set; }

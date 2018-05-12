@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_grade_items_history
-    {
-        public long id { get; set; }
+    public class mdl_grade_items_history : mdl_entity_base {
         public long action { get; set; }
         public long oldid { get; set; }
         public string source { get; set; }

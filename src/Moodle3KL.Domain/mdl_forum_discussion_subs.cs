@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_forum_discussion_subs
-    {
-        public long id { get; set; }
+    public class mdl_forum_discussion_subs : mdl_entity_base {
         public long forum { get; set; }
         public long userid { get; set; }
         public long discussion { get; set; }

@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_todo
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_todo : mdl_entity_base {
         public string plugintype { get; set; }
         public string plugincode { get; set; }
         public string todocode { get; set; }

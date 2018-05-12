@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_wiziq_content
-    {
-        public long id { get; set; }
+    public class mdl_wiziq_content : mdl_entity_base {
         public long? course { get; set; }
         public long? wiziqid { get; set; }
         public long type { get; set; }

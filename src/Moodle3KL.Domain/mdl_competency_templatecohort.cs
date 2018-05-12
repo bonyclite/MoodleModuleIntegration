@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_competency_templatecohort
-    {
-        public long id { get; set; }
+    public class mdl_competency_templatecohort : mdl_entity_base {
         public long templateid { get; set; }
         public long cohortid { get; set; }
         public long timecreated { get; set; }

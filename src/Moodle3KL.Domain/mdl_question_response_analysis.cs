@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_question_response_analysis
-    {
-        public long id { get; set; }
+    public class mdl_question_response_analysis : mdl_entity_base {
         public string hashcode { get; set; }
         public string whichtries { get; set; }
         public long timemodified { get; set; }

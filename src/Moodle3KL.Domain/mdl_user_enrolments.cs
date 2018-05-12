@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_user_enrolments
-    {
-        public long id { get; set; }
+    public class mdl_user_enrolments : mdl_entity_base {
         public long status { get; set; }
         public long enrolid { get; set; }
         public long userid { get; set; }

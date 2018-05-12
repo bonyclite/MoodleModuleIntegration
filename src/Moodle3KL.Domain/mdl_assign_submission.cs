@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_assign_submission
-    {
-        public long id { get; set; }
+    public class mdl_assign_submission : mdl_entity_base {
         public long assignment { get; set; }
         public long userid { get; set; }
         public long timecreated { get; set; }

@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_hotpot
-    {
-        public long id { get; set; }
+    public class mdl_hotpot : mdl_entity_base {
         public long course { get; set; }
         public string name { get; set; }
         public string sourcefile { get; set; }

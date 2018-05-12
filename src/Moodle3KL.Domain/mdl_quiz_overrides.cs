@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_quiz_overrides
-    {
-        public long id { get; set; }
+    public class mdl_quiz_overrides : mdl_entity_base {
         public long quiz { get; set; }
         public long? groupid { get; set; }
         public long? userid { get; set; }

@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_question_answers
-    {
-        public long id { get; set; }
+    public class mdl_question_answers : mdl_entity_base {
         public long question { get; set; }
         public string answer { get; set; }
         public short answerformat { get; set; }

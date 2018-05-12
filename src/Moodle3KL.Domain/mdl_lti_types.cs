@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_lti_types
-    {
-        public long id { get; set; }
+    public class mdl_lti_types : mdl_entity_base {
         public string name { get; set; }
         public string baseurl { get; set; }
         public string tooldomain { get; set; }

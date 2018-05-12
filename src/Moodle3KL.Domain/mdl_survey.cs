@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_survey
-    {
-        public long id { get; set; }
+    public class mdl_survey : mdl_entity_base {
         public long course { get; set; }
         public long template { get; set; }
         public int days { get; set; }

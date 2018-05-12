@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_offlinequiz_results
-    {
-        public long id { get; set; }
+    public class mdl_offlinequiz_results : mdl_entity_base {
         public long offlinequizid { get; set; }
         public long offlinegroupid { get; set; }
         public long userid { get; set; }

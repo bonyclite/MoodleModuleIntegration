@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_external_functions
-    {
-        public long id { get; set; }
+    public class mdl_external_functions : mdl_entity_base {
         public string name { get; set; }
         public string classname { get; set; }
         public string methodname { get; set; }

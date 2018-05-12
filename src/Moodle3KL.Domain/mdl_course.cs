@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_course
-    {
-        public long id { get; set; }
+    public class mdl_course : mdl_entity_base {
         public long category { get; set; }
         public long sortorder { get; set; }
         public string fullname { get; set; }

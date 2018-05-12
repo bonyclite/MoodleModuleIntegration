@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_course_request
-    {
-        public long id { get; set; }
+    public class mdl_course_request : mdl_entity_base {
         public string fullname { get; set; }
         public string shortname { get; set; }
         public string summary { get; set; }

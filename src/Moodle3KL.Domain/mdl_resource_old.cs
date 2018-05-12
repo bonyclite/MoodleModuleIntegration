@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_resource_old
-    {
-        public long id { get; set; }
+    public class mdl_resource_old : mdl_entity_base {
         public long course { get; set; }
         public string name { get; set; }
         public string type { get; set; }

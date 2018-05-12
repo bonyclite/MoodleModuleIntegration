@@ -209,6 +209,14 @@
       <Project>{93086ed9-4e39-4e28-9c12-9bfb60258f16}</Project>
       <Name>Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Moodle3KL.Data\Moodle3KL.Data.csproj">
+      <Project>{fd3ac4b2-d84e-4684-9b41-d4d64f008eb6}</Project>
+      <Name>Moodle3KL.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Moodle3KL.Domain\Moodle3KL.Domain.csproj">
+      <Project>{fd6889a0-1cce-4d47-9c34-e7cbc0e05e11}</Project>
+      <Name>Moodle3KL.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Web.Common\Web.Common.csproj">
       <Project>{c14d252b-c3cf-49d3-97c7-8192d302b311}</Project>
       <Name>Web.Common</Name>

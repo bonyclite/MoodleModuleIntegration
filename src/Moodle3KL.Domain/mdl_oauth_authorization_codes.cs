@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_oauth_authorization_codes
-    {
-        public long id { get; set; }
+    public class mdl_oauth_authorization_codes : mdl_entity_base {
         public string authorization_code { get; set; }
         public string client_id { get; set; }
         public long? user_id { get; set; }

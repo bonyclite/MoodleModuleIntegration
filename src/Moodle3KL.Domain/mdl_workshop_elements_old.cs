@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_workshop_elements_old
-    {
-        public long id { get; set; }
+    public class mdl_workshop_elements_old : mdl_entity_base {
         public long workshopid { get; set; }
         public short elementno { get; set; }
         public string description { get; set; }

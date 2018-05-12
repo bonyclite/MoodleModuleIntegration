@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_tags
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_s_tags : mdl_entity_base {
         public string @class { get; set; }
         public long parentid { get; set; }
         public long ownerid { get; set; }

@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_tool_cohortroles
-    {
-        public long id { get; set; }
+    public class mdl_tool_cohortroles : mdl_entity_base {
         public long cohortid { get; set; }
         public long roleid { get; set; }
         public long userid { get; set; }

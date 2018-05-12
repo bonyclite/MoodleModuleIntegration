@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_backup_controllers
-    {
-        public long id { get; set; }
+    public class mdl_backup_controllers : mdl_entity_base {
         public string backupid { get; set; }
         public string operation { get; set; }
         public string type { get; set; }

@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_qtype_randomsamatch_options
-    {
-        public long id { get; set; }
+    public class mdl_qtype_randomsamatch_options : mdl_entity_base {
         public long questionid { get; set; }
         public long choose { get; set; }
         public short subcats { get; set; }

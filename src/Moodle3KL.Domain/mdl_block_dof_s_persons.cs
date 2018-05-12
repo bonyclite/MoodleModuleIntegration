@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_persons
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_s_persons : mdl_entity_base {
         public string firstname { get; set; }
         public string middlename { get; set; }
         public string lastname { get; set; }

@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_user_devices
-    {
-        public long id { get; set; }
+    public class mdl_user_devices : mdl_entity_base {
         public long userid { get; set; }
         public string appid { get; set; }
         public string name { get; set; }

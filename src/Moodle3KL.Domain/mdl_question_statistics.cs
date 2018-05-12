@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_question_statistics
-    {
-        public long id { get; set; }
+    public class mdl_question_statistics : mdl_entity_base {
         public string hashcode { get; set; }
         public long timemodified { get; set; }
         public long questionid { get; set; }

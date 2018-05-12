@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_competency_evidence
-    {
-        public long id { get; set; }
+    public class mdl_competency_evidence : mdl_entity_base {
         public long usercompetencyid { get; set; }
         public long contextid { get; set; }
         public short action { get; set; }

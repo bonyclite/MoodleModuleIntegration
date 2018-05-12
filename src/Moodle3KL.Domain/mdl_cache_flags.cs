@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_cache_flags
-    {
-        public long id { get; set; }
+    public class mdl_cache_flags : mdl_entity_base {
         public string flagtype { get; set; }
         public string name { get; set; }
         public long timemodified { get; set; }

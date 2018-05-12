@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_xp_config
-    {
-        public long id { get; set; }
+    public class mdl_block_xp_config : mdl_entity_base {
         public long courseid { get; set; }
         public short enabled { get; set; }
         public short enablelog { get; set; }

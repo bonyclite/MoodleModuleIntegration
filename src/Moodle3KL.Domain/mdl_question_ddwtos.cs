@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_question_ddwtos
-    {
-        public long id { get; set; }
+    public class mdl_question_ddwtos : mdl_entity_base {
         public long questionid { get; set; }
         public short shuffleanswers { get; set; }
         public string correctfeedback { get; set; }

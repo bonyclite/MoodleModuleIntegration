@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_rss_client
-    {
-        public long id { get; set; }
+    public class mdl_block_rss_client : mdl_entity_base {
         public long userid { get; set; }
         public string title { get; set; }
         public string preferredtitle { get; set; }

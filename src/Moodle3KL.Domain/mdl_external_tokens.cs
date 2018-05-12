@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_external_tokens
-    {
-        public long id { get; set; }
+    public class mdl_external_tokens : mdl_entity_base {
         public string token { get; set; }
         public short tokentype { get; set; }
         public long userid { get; set; }

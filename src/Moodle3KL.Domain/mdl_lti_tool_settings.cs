@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_lti_tool_settings
-    {
-        public long id { get; set; }
+    public class mdl_lti_tool_settings : mdl_entity_base {
         public long toolproxyid { get; set; }
         public long? course { get; set; }
         public long? coursemoduleid { get; set; }

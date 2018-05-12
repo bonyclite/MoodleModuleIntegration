@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_log_queries
-    {
-        public long id { get; set; }
+    public class mdl_log_queries : mdl_entity_base {
         public int qtype { get; set; }
         public string sqltext { get; set; }
         public string sqlparams { get; set; }

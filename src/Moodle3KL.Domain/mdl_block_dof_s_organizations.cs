@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_organizations
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_s_organizations : mdl_entity_base {
         public string fullname { get; set; }
         public string shortname { get; set; }
         public long? inn { get; set; }

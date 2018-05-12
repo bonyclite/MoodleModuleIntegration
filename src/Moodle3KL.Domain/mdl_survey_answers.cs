@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_survey_answers
-    {
-        public long id { get; set; }
+    public class mdl_survey_answers : mdl_entity_base {
         public long userid { get; set; }
         public long survey { get; set; }
         public long question { get; set; }

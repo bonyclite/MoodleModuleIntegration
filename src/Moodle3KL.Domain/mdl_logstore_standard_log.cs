@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_logstore_standard_log
-    {
-        public long id { get; set; }
+    public class mdl_logstore_standard_log : mdl_entity_base {
         public string eventname { get; set; }
         public string component { get; set; }
         public string action { get; set; }

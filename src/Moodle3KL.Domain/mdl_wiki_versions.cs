@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_wiki_versions
-    {
-        public long id { get; set; }
+    public class mdl_wiki_versions : mdl_entity_base {
         public long pageid { get; set; }
         public string content { get; set; }
         public string contentformat { get; set; }

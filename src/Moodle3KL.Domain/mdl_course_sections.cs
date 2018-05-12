@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_course_sections
-    {
-        public long id { get; set; }
+    public class mdl_course_sections : mdl_entity_base {
         public long course { get; set; }
         public long section { get; set; }
         public string name { get; set; }

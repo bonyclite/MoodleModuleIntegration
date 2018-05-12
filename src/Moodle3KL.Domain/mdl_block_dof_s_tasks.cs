@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_tasks
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_s_tasks : mdl_entity_base {
         public long parentid { get; set; }
         public long assignedpersonid { get; set; }
         public long purchaserpersonid { get; set; }

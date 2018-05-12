@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_enrol_flatfile
-    {
-        public long id { get; set; }
+    public class mdl_enrol_flatfile : mdl_entity_base {
         public string action { get; set; }
         public long roleid { get; set; }
         public long userid { get; set; }

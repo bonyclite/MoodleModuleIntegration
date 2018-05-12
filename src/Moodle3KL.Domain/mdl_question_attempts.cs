@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_question_attempts
-    {
-        public long id { get; set; }
+    public class mdl_question_attempts : mdl_entity_base {
         public long questionusageid { get; set; }
         public long slot { get; set; }
         public string behaviour { get; set; }

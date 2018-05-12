@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_aclwarrants
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_s_aclwarrants : mdl_entity_base {
         public string linkptype { get; set; }
         public string linkpcode { get; set; }
         public long linkid { get; set; }

@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_feedback_completedtmp
-    {
-        public long id { get; set; }
+    public class mdl_feedback_completedtmp : mdl_entity_base {
         public long feedback { get; set; }
         public long userid { get; set; }
         public string guestid { get; set; }

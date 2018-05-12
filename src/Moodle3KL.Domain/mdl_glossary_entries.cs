@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_glossary_entries
-    {
-        public long id { get; set; }
+    public class mdl_glossary_entries : mdl_entity_base {
         public long glossaryid { get; set; }
         public long userid { get; set; }
         public string concept { get; set; }

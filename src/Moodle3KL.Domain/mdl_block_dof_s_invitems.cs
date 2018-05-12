@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_invitems
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_s_invitems : mdl_entity_base {
         public string name { get; set; }
         public string code { get; set; }
         public string serialnum { get; set; }

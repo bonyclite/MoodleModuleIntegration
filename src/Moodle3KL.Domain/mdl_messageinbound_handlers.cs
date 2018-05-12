@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_messageinbound_handlers
-    {
-        public long id { get; set; }
+    public class mdl_messageinbound_handlers : mdl_entity_base {
         public string component { get; set; }
         public string classname { get; set; }
         public long defaultexpiration { get; set; }

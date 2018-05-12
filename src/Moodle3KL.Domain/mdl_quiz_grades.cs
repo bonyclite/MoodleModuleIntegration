@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_quiz_grades
-    {
-        public long id { get; set; }
+    public class mdl_quiz_grades : mdl_entity_base {
         public long quiz { get; set; }
         public long userid { get; set; }
         public decimal grade { get; set; }

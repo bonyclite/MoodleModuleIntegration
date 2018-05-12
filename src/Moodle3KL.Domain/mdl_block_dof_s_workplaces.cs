@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_workplaces
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_s_workplaces : mdl_entity_base {
         public long? personid { get; set; }
         public long? organizationid { get; set; }
         public string statuswork { get; set; }

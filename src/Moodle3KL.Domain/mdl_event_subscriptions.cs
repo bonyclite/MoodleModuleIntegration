@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_event_subscriptions
-    {
-        public long id { get; set; }
+    public class mdl_event_subscriptions : mdl_entity_base {
         public string url { get; set; }
         public long courseid { get; set; }
         public long groupid { get; set; }

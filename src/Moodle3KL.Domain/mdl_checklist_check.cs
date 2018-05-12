@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_checklist_check
-    {
-        public long id { get; set; }
+    public class mdl_checklist_check : mdl_entity_base {
         public long item { get; set; }
         public long userid { get; set; }
         public long usertimestamp { get; set; }

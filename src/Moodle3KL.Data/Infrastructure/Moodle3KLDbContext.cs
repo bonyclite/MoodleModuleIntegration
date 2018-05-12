@@ -510,6 +510,5 @@ namespace Moodle3KL.Data.Infrastructure
         public virtual DbSet<mdl_workshopform_rubric> mdl_workshopform_rubric { get; set; }
         public virtual DbSet<mdl_workshopform_rubric_config> mdl_workshopform_rubric_config { get; set; }
         public virtual DbSet<mdl_workshopform_rubric_levels> mdl_workshopform_rubric_levels { get; set; }
-
     }
 }

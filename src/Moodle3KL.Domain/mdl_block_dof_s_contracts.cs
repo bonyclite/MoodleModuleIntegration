@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_contracts
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_s_contracts : mdl_entity_base {
         public short? typeid { get; set; }
         public string num { get; set; }
         public string numpass { get; set; }

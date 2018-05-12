@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_appointments
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_s_appointments : mdl_entity_base {
         public long? eagreementid { get; set; }
         public long? schpositionid { get; set; }
         public string enumber { get; set; }

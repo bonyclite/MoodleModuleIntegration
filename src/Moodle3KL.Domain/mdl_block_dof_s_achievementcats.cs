@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_achievementcats
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_s_achievementcats : mdl_entity_base {
         public string name { get; set; }
         public long parentid { get; set; }
         public long? departmentid { get; set; }

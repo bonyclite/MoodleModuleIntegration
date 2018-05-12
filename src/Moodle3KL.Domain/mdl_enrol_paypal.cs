@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_enrol_paypal
-    {
-        public long id { get; set; }
+    public class mdl_enrol_paypal : mdl_entity_base {
         public string business { get; set; }
         public string receiver_email { get; set; }
         public string receiver_id { get; set; }

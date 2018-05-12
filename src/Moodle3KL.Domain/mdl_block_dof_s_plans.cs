@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_block_dof_s_plans
-    {
-        public long id { get; set; }
+    public class mdl_block_dof_s_plans : mdl_entity_base {
         public long? linkid { get; set; }
         public string linktype { get; set; }
         public long? parentid { get; set; }

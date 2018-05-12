@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_quiz_feedback
-    {
-        public long id { get; set; }
+    public class mdl_quiz_feedback : mdl_entity_base {
         public long quizid { get; set; }
         public string feedbacktext { get; set; }
         public short feedbacktextformat { get; set; }

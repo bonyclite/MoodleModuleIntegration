@@ -1,8 +1,6 @@
 namespace Moodle3KL.Domain
 {
-    public class mdl_workshop_submissions
-    {
-        public long id { get; set; }
+    public class mdl_workshop_submissions : mdl_entity_base {
         public long workshopid { get; set; }
         public short? example { get; set; }
         public long authorid { get; set; }
