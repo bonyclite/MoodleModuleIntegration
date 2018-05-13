@@ -1,0 +1,64 @@
+﻿@using StudentCard.Web.UI.Controllers
+@using Web.Common.App.Extensions
+
+<div id="search-form" class="form-inline">
+    <input class="form-control" name="FirstName" type="text" placeholder="Имя" />
+    <input class="form-control" name="MiddleName" type="text" placeholder="Фамилия" />
+    <input class="form-control" name="LastName" type="text" placeholder="Отчество" />
+
+    <button id="search" class="btn btn-primary">Поиск</button>
+</div>
+
+<br/>
+
+<div id="person-container" class="list-group">
+</div>
+
+<style>
+    #search-form input, button {
+        margin-left: 10px
+    }
+</style>
+
+<script>
+    $(function() {
+        $("#search").click(function(e) {
+            $.ajax({
+                type: "POST",
+                url: "@(Html.BuildUrlFromExpression<StudentCardController>(c => c.Search(null)))",
+                data: JSON.stringify({
+                    FirstName: $("#input[Name='FirstName']").val(),
+                    MiddleName: $("#input[Name='MiddleName']").val(),
+                    LastName: $("#input[Name='LastName']").val(),
+                }),
+                contentType: "application/json",
+                success: function (data) {
+                    var personContainer = $("#person-container");
+
+                    personContainer.empty();
+                    personContainer.append(getPersonsListHtml(data.Persons));
+                },
+                error: function(data) {
+                    console.log(data);
+                }
+            });
+        });
+
+        function getPersonsListHtml(persons) {
+            var url = "@(Html.BuildUrlFromExpression<StudentCardController>(c => c.Front(0)))";
+
+            var html = "";
+
+            for (var i = 0; i < persons.length; i++) {
+                var person = persons[i];
+
+                var fullName = person.lastname + " " + person.firstname + " " + person.middlename;
+                html += "<a href='" +
+                    url.replace('0', person.id) +
+                    "' class='list-group-item list-group-item-action'>" + fullName + "</a>";
+            }
+
+            return html;
+        }
+    });
+</script>

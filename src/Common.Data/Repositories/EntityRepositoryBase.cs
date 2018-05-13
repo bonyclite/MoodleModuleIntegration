@@ -28,14 +28,6 @@ namespace Common.Data.Repositories
             Entities = DataContext.Set<TEntity>();
         }
 
-        public void Delete(TEntity entity)
-        {
-            if (entity == null)
-                throw new ArgumentNullException(nameof(entity));
-
-            Entities.Remove(entity);
-        }
-
         public IQueryable<TEntity> GetAll()
         {
             return Entities.AsQueryable();
@@ -54,17 +46,6 @@ namespace Common.Data.Repositories
         public IQueryable<TResult> GetMany<TResult>(Expression<Func<TEntity, bool>> where, Expression<Func<TEntity, TResult>> selector)
         {
             return GetAll().Where(where).Select(selector);
-        }
-
-        protected virtual void Update(TEntity entity)
-        {
-            var entityState = DataContext.GetEntityState(entity);
-
-            if (entityState == EntityState.Detached)
-            {
-                entityState = EntityState.Modified;
-                DataContext.AttachEntity(entity, entityState);
-            }
         }
     }
 }
