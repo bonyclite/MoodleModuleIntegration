@@ -17,15 +17,18 @@ namespace Web.Common.App
                 "~/Scripts/jquery-3.3.1.slim.min.js",
                 "~/Scripts/jquery-3.3.1.min.js"));
 
-            BundleTable.Bundles.Add(new EmbeddedCommonScriptBundle("~/Scripts/bootstrap/bundle").IncludeFiles(
-                "~/Scripts/popper-utils.min.js",
-                "~/Scripts/popper.min.js",
-                "~/Scripts/popper.js",
-                "~/Scripts/bootstrap.js",
-                "~/Scripts/bootstrap.min.js"));
-
             BundleTable.Bundles.Add(new EmbeddedCommonScriptBundle("~/Scripts/modernizr/bundle").IncludeFiles(
                 "~/Scripts/modernizr-2.8.3.js"));
+
+            BundleTable.Bundles.Add(new EmbeddedCommonScriptBundle("~/Scripts/bootstrap/bundle").IncludeFiles(
+                "~/Scripts/esm/popper.min.js",
+                "~/Scripts/esm/popper-utils.min.js",
+                "~/Scripts/umd/popper.min.js",
+                "~/Scripts/umd/popper-utils.min.js",
+                "~/Scripts/popper.min.js",
+                "~/Scripts/popper-utils.min.js",
+                "~/Scripts/bootstrap.min.js",
+                "~/Scripts/bootstrap.bundle.min.js"));
 
             BundleTable.Bundles.Add(new EmbeddedCommonStyleBundle("~/Content/site/bundle").IncludeFiles(
                 "~/Content/Site.css"));

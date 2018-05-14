@@ -5,7 +5,6 @@ using Microsoft.Web.Mvc;
 using Moodle3KL.Data.Repositories;
 using Moodle3KL.Domain;
 using StudentCard.Web.UI.Models.StudentCard.Front;
-using StudentCard.Web.UI.Models.StudentCard.Search;
 
 namespace StudentCard.Web.UI.Controllers
 {
@@ -20,25 +19,13 @@ namespace StudentCard.Web.UI.Controllers
             return View();
         }
 
-        [ChildActionOnly]
-        public ActionResult Search()
+        [AjaxOnly]
+        public ActionResult Details(long personId)
         {
-            return PartialView();
+            return PartialView("~/Views/StudentCard/Details.cshtml");
         }
 
-        [HttpPost]
-        public JsonResult Search(StudentCardSearchModel model)
-        {
-            var persons = MdlBlockDofSPersonsRepository
-                .GetMany(p => p.firstname.ToLower().Equals(model.FirstName.ToLower())
-                              || p.middlename.ToLower().Equals(model.MiddleName.ToLower())
-                              || p.lastname.ToLower().Equals(model.LastName.ToLower()))
-                .ToArray();
-
-            return Json(new { Persons = persons });
-        }
-
-        [ChildActionOnly, AjaxOnly]
+        [AjaxOnly]
         public ActionResult Front(long personId)
         {
             var student = MdlBlockDofSPersonsRepository.GetById(personId);

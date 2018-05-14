@@ -131,10 +131,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Web.Common\bin\Debug\System.Web.WebPages.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Web.Common\bin\Debug\System.Web.WebPages.Deployment.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Web.Common\bin\Debug\System.Web.WebPages.Razor.dll</HintPath>
@@ -173,13 +169,14 @@
     <Compile Include="App\BundleConfig.cs" />
     <Compile Include="App\FilterConfig.cs" />
     <Compile Include="App\RouteConfig.cs" />
+    <Compile Include="Controllers\PersonsController.cs" />
     <Compile Include="Controllers\StudentCardController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Persons\List\PersonsListModel.cs" />
     <Compile Include="Models\StudentCard\Front\FacultyModel.cs" />
     <Compile Include="Models\StudentCard\Front\StudentCardFrontModel.cs" />
-    <Compile Include="Models\StudentCard\Search\StudentCardSearchModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -207,7 +204,8 @@
     <None Include="packages.config" />
     <Content Include="Views\StudentCard\Front.cshtml" />
     <Content Include="Views\StudentCard\Index.cshtml" />
-    <Content Include="Views\StudentCard\Search.cshtml" />
+    <Content Include="Views\Persons\List.cshtml" />
+    <Content Include="Views\StudentCard\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common.Data\Common.Data.csproj">

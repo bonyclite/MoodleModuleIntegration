@@ -3,8 +3,8 @@
 
 <div id="search-form" class="form-inline">
     <input class="form-control" name="FirstName" type="text" placeholder="Имя" />
-    <input class="form-control" name="MiddleName" type="text" placeholder="Фамилия" />
-    <input class="form-control" name="LastName" type="text" placeholder="Отчество" />
+    <input class="form-control" name="LastName" type="text" placeholder="Фамилия" />
+    <input class="form-control" name="MiddleName" type="text" placeholder="Отчество" />
 
     <button id="search" class="btn btn-primary">Поиск</button>
 </div>
@@ -25,11 +25,11 @@
         $("#search").click(function(e) {
             $.ajax({
                 type: "POST",
-                url: "@(Html.BuildUrlFromExpression<StudentCardController>(c => c.Search(null)))",
+                url: "@(Html.BuildUrlFromExpression<PersonsController>(c => c.List(null)))",
                 data: JSON.stringify({
-                    FirstName: $("#input[Name='FirstName']").val(),
-                    MiddleName: $("#input[Name='MiddleName']").val(),
-                    LastName: $("#input[Name='LastName']").val(),
+                    FirstName: $("input[name='FirstName']").val(),
+                    MiddleName: $("input[name='MiddleName']").val(),
+                    LastName: $("input[name='LastName']").val()
                 }),
                 contentType: "application/json",
                 success: function (data) {
@@ -45,7 +45,9 @@
         });
 
         function getPersonsListHtml(persons) {
-            var url = "@(Html.BuildUrlFromExpression<StudentCardController>(c => c.Front(0)))";
+            if (persons.length === 0) {
+                return "<label>Не найдено совпадений</label>";
+            }
 
             var html = "";
 
@@ -53,9 +55,7 @@
                 var person = persons[i];
 
                 var fullName = person.lastname + " " + person.firstname + " " + person.middlename;
-                html += "<a href='" +
-                    url.replace('0', person.id) +
-                    "' class='list-group-item list-group-item-action'>" + fullName + "</a>";
+                html += "<a href='javasript:void(0)' id='" +person.id + "' class='list-group-item list-group-item-action'>" + fullName + "</a>";
             }
 
             return html;
