@@ -1,8 +1,6 @@
 namespace EducationalPlans.Domain
 {
-    public class ЗаездыНормы
-    {
-        public string id { get; set; }
+    public class ЗаездыНормы : BaseModel {
         public int rowOrder { get; set; }
         public string hasChanges { get; set; }
         public int Код { get; set; }

@@ -1,8 +1,6 @@
 namespace EducationalPlans.Domain
 {
-    public class Кафедры
-    {
-        public string id { get; set; }
+    public class Кафедры : BaseModel {
         public int rowOrder { get; set; }
         public string hasChanges { get; set; }
         public int Код { get; set; }

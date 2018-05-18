@@ -1,8 +1,6 @@
 namespace EducationalPlans.Domain
 {
-    public class ПрограммаПодготовки
-    {
-        public string id { get; set; }
+    public class ПрограммаПодготовки : BaseModel {
         public int rowOrder { get; set; }
         public int Код { get; set; }
         public string Наименование { get; set; }

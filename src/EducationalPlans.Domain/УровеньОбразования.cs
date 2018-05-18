@@ -1,8 +1,6 @@
 namespace EducationalPlans.Domain
 {
-    public class УровеньОбразования
-    {
-        public string id { get; set; }
+    public class УровеньОбразования : BaseModel {
         public int rowOrder { get; set; }
         public int Код { get; set; }
         public string Уровень { get; set; }

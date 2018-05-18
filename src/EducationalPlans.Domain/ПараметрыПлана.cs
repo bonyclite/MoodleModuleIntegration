@@ -1,8 +1,6 @@
 namespace EducationalPlans.Domain
 {
-    public class ПараметрыПлана
-    {
-        public string id { get; set; }
+    public class ПараметрыПлана : BaseModel {
         public int rowOrder { get; set; }
         public string hasChanges { get; set; }
         public int КодПлана { get; set; }

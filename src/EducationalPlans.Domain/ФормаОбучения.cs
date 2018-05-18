@@ -2,9 +2,7 @@ using System.Xml.Serialization;
 
 namespace EducationalPlans.Domain
 {
-    public class ФормаОбучения
-    {
-        public string id { get; set; }
+    public class ФормаОбучения : BaseModel {
         public int rowOrder { get; set; }
         public int Код { get; set; }
 

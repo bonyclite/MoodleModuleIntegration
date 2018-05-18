@@ -1,8 +1,6 @@
 namespace EducationalPlans.Domain
 {
-    public class СправочникБазы
-    {
-        public string id { get; set; }
+    public class СправочникБазы : BaseModel {
         public int rowOrder { get; set; }
         public int Код { get; set; }
         public string Наименование { get; set; }

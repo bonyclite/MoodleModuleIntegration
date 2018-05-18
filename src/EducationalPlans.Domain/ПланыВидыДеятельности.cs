@@ -1,8 +1,6 @@
 namespace EducationalPlans.Domain
 {
-    public class ПланыВидыДеятельности
-    {
-        public string id { get; set; }
+    public class ПланыВидыДеятельности : BaseModel {
         public int rowOrder { get; set; }
         public string hasChanges { get; set; }
         public int Код { get; set; }

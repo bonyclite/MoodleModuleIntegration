@@ -1,8 +1,6 @@
 namespace EducationalPlans.Domain
 {
-    public class ПланыГрафикиЯчейки
-    {
-        public string id { get; set; }
+    public class ПланыГрафикиЯчейки : BaseModel {
         public int rowOrder { get; set; }
         public string hasChanges { get; set; }
         public int Код { get; set; }
