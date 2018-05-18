@@ -12,5 +12,6 @@ namespace EducationalPlans.Domain
         public string ТипГОСа { get; set; }
         public bool Используется { get; set; }
         public string Префикс { get; set; }
+        public string ДатаДокумента { get; set; }
     }
 }
