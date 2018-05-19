@@ -1,1 +1,25 @@
-﻿
+﻿@using StudentCard.Web.UI.Models.StudentCard.Front
+
+@model StudentCardFrontModel
+    
+@{
+    var student = Model.StudentModel;
+}
+
+<div class="jumbotron container">
+    <div>
+        <h2 class="text-center display-4">Учебная карточка студента</h2>
+        <p class="lead"><b>@Model.DepartamentName</b></p>
+        <p class="lead">Направление - <b>@Model.ProgrammName</b></p>
+    </div>
+    <hr class="my-4"/>
+    <div class="row">
+        <div>
+            <p class="col-form-label">Фамилия, имя, отчество - @student.LastName @student.FirstName @student.MiddleName</p>
+            <p>Дата рождения - @student.BirhtDate</p>
+            <p>Домашний телефон - @student.PhoneHome</p>
+            <p>Личный телефон - @student.PhoneNumber</p>
+            <p>Написать <a href="mailto:@student.Email">@student.Email</a></p>
+        </div>
+    </div>
+</div>

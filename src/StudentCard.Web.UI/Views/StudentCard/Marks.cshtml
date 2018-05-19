@@ -1,0 +1,48 @@
+﻿@using StudentCard.Web.UI.Models.StudentCard.Marks
+
+@model StudentCardMarksModel
+
+<div class="container">
+    @foreach (var semester in Model.Semesters)
+    {
+        <div class="row">
+            <div class="col-3">
+                @semester.Name
+            </div>
+            <div class="col">
+                <table class="table table-hover table-bordered table-borderless">
+                    <thead>
+                        <tr>
+                            <th>Дисциплина</th>
+                            <th>Код</th>
+                            <th>Контроль</th>
+                            <th>Оценка</th>
+                            <th>Кол-во часов</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var discipline in semester.Disciplines)
+                        {
+                            <tr>
+                                <th scope="row">@discipline.Name</th>
+                                <td>@discipline.Code</td>
+                                <td>@discipline.Form</td>
+                                <td>@discipline.Mark</td>
+                                <td>@discipline.Hours</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr class="my-4" style="height: 10px; border: 0; box-shadow: 0 10px 10px -10px #8c8b8b inset;"/>
+    }
+</div>
+
+<script>
+    $(function() {
+        $("table").DataTable({
+            paging: false
+        });
+    })
+</script>

@@ -13,8 +13,10 @@ namespace Common.Data.Repositories
     {
         IQueryable<TEntity> GetAll();
         IQueryable<TResult> GetAll<TResult>(Expression<Func<TEntity, TResult>> selector);
+        bool Any(Expression<Func<TEntity, bool>> where);
         IQueryable<TEntity> GetMany(Expression<Func<TEntity, bool>> where);
         IQueryable<TResult> GetMany<TResult>(Expression<Func<TEntity, bool>> where, Expression<Func<TEntity, TResult>> selector);
+        TResult SingleOrDefault<TResult>(Expression<Func<TEntity, bool>> where, Expression<Func<TEntity, TResult>> selector);
     }
 
     public class EntityRepositoryBase<TEntity> : IEntityRepository<TEntity> where TEntity : class, IEntityBase
@@ -38,6 +40,11 @@ namespace Common.Data.Repositories
             return GetAll().Select(selector);
         }
 
+        public bool Any(Expression<Func<TEntity, bool>> @where)
+        {
+            return GetAll().Any(where);
+        }
+
         public IQueryable<TEntity> GetMany(Expression<Func<TEntity, bool>> where)
         {
             return GetAll().Where(where);
@@ -46,6 +53,11 @@ namespace Common.Data.Repositories
         public IQueryable<TResult> GetMany<TResult>(Expression<Func<TEntity, bool>> where, Expression<Func<TEntity, TResult>> selector)
         {
             return GetAll().Where(where).Select(selector);
+        }
+
+        public TResult SingleOrDefault<TResult>(Expression<Func<TEntity, bool>> @where, Expression<Func<TEntity, TResult>> selector)
+        {
+            return GetMany(where, selector).SingleOrDefault();
         }
     }
 }

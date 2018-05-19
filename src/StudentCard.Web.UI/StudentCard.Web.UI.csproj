@@ -175,8 +175,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Persons\List\PersonsListModel.cs" />
-    <Compile Include="Models\StudentCard\Front\FacultyModel.cs" />
+    <Compile Include="Models\StudentCard\Details\StudentCardDetailsModel.cs" />
     <Compile Include="Models\StudentCard\Front\StudentCardFrontModel.cs" />
+    <Compile Include="Models\StudentCard\Marks\StudentCardMarksModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -206,6 +207,7 @@
     <Content Include="Views\StudentCard\Index.cshtml" />
     <Content Include="Views\Persons\List.cshtml" />
     <Content Include="Views\StudentCard\Details.cshtml" />
+    <Content Include="Views\StudentCard\Marks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common.Data\Common.Data.csproj">

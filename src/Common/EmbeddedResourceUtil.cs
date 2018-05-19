@@ -20,11 +20,13 @@ namespace Common
         private static string GetResourceName(string virtualPath, IEnumerable<Assembly> searchIn, out Assembly foundIn)
         {
             virtualPath = virtualPath.TrimStart('~', '/');
+
             var dirName = (Path.GetDirectoryName(virtualPath) ?? "").Replace("-", "_");
             var fileName = Path.GetFileName(virtualPath);
 
             var resourcePath = Path.Combine(dirName, fileName).Replace("\\", ".").Replace("/", ".");
             string resourceName = null;
+
             foundIn = searchIn.FirstOrDefault(a =>
             {
                 var rName = a.GetName().Name + "." + resourcePath;
