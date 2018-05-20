@@ -1,6 +1,4 @@
-﻿using System.Data.Common;
-using System.Data.Entity;
-
+﻿using System.Data.Entity;
 using Moodle3KL.Domain;
 using MySql.Data.Entity;
 

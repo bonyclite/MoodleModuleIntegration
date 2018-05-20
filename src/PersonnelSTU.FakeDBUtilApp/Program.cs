@@ -9,8 +9,11 @@ namespace PersonnelSTU.FakeDBUtilApp
     {
         public static void Main(string[] args)
         {
-            var realContext = new PersonnelStuDbContext(AppConfig.PersonnelSTUDbConnectionString);
             var fakeContext = new PersonnelStuDbContext(AppConfig.FakePersonnelSTUDbConnectionString);
+
+            var sdfsd = fakeContext.Faculties.AsNoTracking().ToArray();
+
+            var realContext = new PersonnelStuDbContext(AppConfig.PersonnelSTUDbConnectionString);
             
             var faculties = realContext.Faculties.AsNoTracking().ToArray();
             fakeContext.Faculties.AddRange(faculties);

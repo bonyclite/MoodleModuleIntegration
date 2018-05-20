@@ -10,7 +10,7 @@ namespace Common.Data
     {
         public static void RegisterTypes(ContainerBuilder builder, Func<IRegistrationBuilder<object, object, object>, IRegistrationBuilder<object, object, object>> lifetimeScopeConfigurator)
         {
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().ApplyDefaultConfiguration(lifetimeScopeConfigurator);
+            //builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().ApplyDefaultConfiguration(lifetimeScopeConfigurator);
             builder.RegisterGeneric(typeof(EntityRepositoryBase<>)).As(typeof(IEntityRepository<>)).ApplyDefaultConfiguration(lifetimeScopeConfigurator);
         }
     }

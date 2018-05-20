@@ -1,6 +1,5 @@
 ﻿using System.Data.Entity;
 using System.Diagnostics.CodeAnalysis;
-using PersonnelSTU.Data.Migrations;
 using PersonnelSTU.Domain;
 
 namespace PersonnelSTU.Data.Infrastructure
@@ -17,14 +16,9 @@ namespace PersonnelSTU.Data.Infrastructure
         public DbSet<StuState> StuStates { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
 
-        public PersonnelStuDbContext():this(AppConfig.FakePersonnelSTUDbConnectionString)
+        public PersonnelStuDbContext(string connection) : base(connection)
         {
             
-        }
-
-        public PersonnelStuDbContext(string connectionString) : base(connectionString)
-        {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<PersonnelStuDbContext, Configuration>());
         }
     }
 }

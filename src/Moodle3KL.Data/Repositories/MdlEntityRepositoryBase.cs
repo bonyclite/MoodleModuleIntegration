@@ -16,7 +16,7 @@ namespace Moodle3KL.Data.Repositories
 
     public class MdlEntityRepositoryBase<TEntity> : EntityRepositoryBase<TEntity>, IMdlEntityRepositoryBase<TEntity> where TEntity : mdl_entity_base
     {
-        public MdlEntityRepositoryBase(IDbFactory dbFactory) : base(dbFactory)
+        public MdlEntityRepositoryBase(IMoodle3KLDbFactory dbFactory) : base(dbFactory)
         {
         }
 

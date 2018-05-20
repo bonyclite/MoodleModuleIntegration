@@ -2,7 +2,12 @@
 
 namespace Moodle3KL.Data.Infrastructure
 {
-    public class Moodle3KLDbFactory : DbFactoryBase
+    public interface IMoodle3KLDbFactory : IDbFactory
+    {
+
+    }
+
+    public class Moodle3KLDbFactory : DbFactoryBase, IMoodle3KLDbFactory
     {
         protected override IDbContext Create()
         {
