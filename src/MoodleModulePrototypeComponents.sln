@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationalPlans.Parser.Api
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationalPlans.Parser.UI", "EducationalPlans.Parser.UI\EducationalPlans.Parser.UI.csproj", "{CD226A7A-EA53-4F07-A895-D763E80F974A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationalPlans.Parser.WebApi", "EducationalPlans.Parser.WebApi\EducationalPlans.Parser.WebApi.csproj", "{65DEB57B-66BE-45C5-89CF-0E3BDC401937}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{CD226A7A-EA53-4F07-A895-D763E80F974A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD226A7A-EA53-4F07-A895-D763E80F974A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD226A7A-EA53-4F07-A895-D763E80F974A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65DEB57B-66BE-45C5-89CF-0E3BDC401937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65DEB57B-66BE-45C5-89CF-0E3BDC401937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65DEB57B-66BE-45C5-89CF-0E3BDC401937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65DEB57B-66BE-45C5-89CF-0E3BDC401937}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -122,6 +128,7 @@ Global
 		{FD3AC4B2-D84E-4684-9B41-D4D64F008EB6} = {479EE799-379A-42C9-A287-3908916E566A}
 		{9F9C5709-02F1-47FA-93AF-20310A91CF2D} = {DE408069-852B-4675-BD01-9F2A48995F16}
 		{CD226A7A-EA53-4F07-A895-D763E80F974A} = {DE408069-852B-4675-BD01-9F2A48995F16}
+		{65DEB57B-66BE-45C5-89CF-0E3BDC401937} = {DE408069-852B-4675-BD01-9F2A48995F16}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24984DED-B3A2-481F-B0FA-BDD229F64B73}
