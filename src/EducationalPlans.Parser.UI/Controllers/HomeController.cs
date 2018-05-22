@@ -1,4 +1,7 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 
 using Moodle3KL.Data.Repositories;
@@ -10,10 +13,20 @@ namespace EducationalPlans.Parser.UI.Controllers
     {
         public IMdlEntityRepositoryBase<mdl_assign_user_flags> MdlEntityRepositoryBase { get; set; }
 
-        // GET: Home
-        public ActionResult Index()
+        private readonly HttpClient _httpClient;
+
+        public HomeController(HttpClient httpClient)
         {
-            var sdf = MdlEntityRepositoryBase.GetAll().ToArray();
+            _httpClient = new HttpClient();
+        }
+
+        // GET: Home
+        public async Task<ActionResult> Index()
+        {
+            //var sdf = MdlEntityRepositoryBase.GetAll().ToArray();
+            _httpClient.BaseAddress = new Uri(Environment.GetEnvironmentVariable("API-HOST"));
+
+            var response = await _httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Get, "api/PersonnelSTU/GetFaculties"));
             
             return View();
         }
