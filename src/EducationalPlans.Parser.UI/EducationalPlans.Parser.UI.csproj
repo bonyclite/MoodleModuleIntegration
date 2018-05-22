@@ -208,14 +208,6 @@
       <Project>{fd6889a0-1cce-4d47-9c34-e7cbc0e05e11}</Project>
       <Name>Moodle3KL.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PersonnelSTU.Data\PersonnelSTU.Data.csproj">
-      <Project>{e6e1850a-082e-4ca7-bce0-0d4881305629}</Project>
-      <Name>PersonnelSTU.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PersonnelSTU.Domain\PersonnelSTU.Domain.csproj">
-      <Project>{dff09623-6e81-4fb8-9649-5a59af4a3622}</Project>
-      <Name>PersonnelSTU.Domain</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Web.Common\Web.Common.csproj">
       <Project>{c14d252b-c3cf-49d3-97c7-8192d302b311}</Project>
       <Name>Web.Common</Name>

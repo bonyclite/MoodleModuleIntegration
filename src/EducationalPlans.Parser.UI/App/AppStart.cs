@@ -22,9 +22,7 @@ namespace EducationalPlans.Parser.UI.App
         {
             base.RegisterTypes(builder);
 
-            PersonnelSTU.Data.Bootstrapper.RegisterTypes(builder, LifetimeScopeConfigurator);
             Moodle3KL.Data.Bootstrapper.RegisterTypes(builder, LifetimeScopeConfigurator);
-
             builder.RegisterControllers(typeof(AppStart).Assembly).PropertiesAutowired();
         }
 
