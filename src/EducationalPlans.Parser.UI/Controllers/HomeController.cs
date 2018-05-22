@@ -18,13 +18,6 @@ namespace EducationalPlans.Parser.UI.Controllers
         public IXmlFileParserService XmlFileParserService { get; set; }
         public IPersonnelSTUService PersonnelStuService { get; set; }
 
-        private readonly HttpClient _httpClient;
-
-        public HomeController()
-        {
-            _httpClient = new HttpClient();
-        }
-
         // GET: Home
         public async Task<ActionResult> Index()
         {
