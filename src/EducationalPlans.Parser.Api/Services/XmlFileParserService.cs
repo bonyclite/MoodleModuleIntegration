@@ -6,20 +6,15 @@ using EducationalPlans.Domain;
 
 namespace EducationalPlans.Parser.Api.Services
 {
-    public interface IParserService
+    public interface IXmlFileParserService
     {
         void SetFilePath(string xmlFilePath);
         IEnumerable<TBaseModel> GetFileRecords<TBaseModel>() where TBaseModel : BaseModel, new();
     }
 
-    public class ParserService : IParserService
+    public class XmlFileParserService : IXmlFileParserService
     {
         private string _xmlFilePath;
-
-        public ParserService(string xmlFilePath)
-        {
-            SetFilePath(xmlFilePath);
-        }
 
         public void SetFilePath(string xmlFilePath)
         {

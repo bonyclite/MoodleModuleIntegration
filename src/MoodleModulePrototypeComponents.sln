@@ -45,11 +45,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationalPlans.Parser.UI"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PersonnelSTU.Core", "PersonnelSTU.Core", "{30DCB879-FCE2-4725-AC69-0C397D490331}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelSTU.Core.Domain", "PersonnelSTU.Core.Domain\PersonnelSTU.Core.Domain.csproj", "{2B46E1B6-72A3-4B5F-91BB-C274052D7AF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonnelSTU.Core.Domain", "PersonnelSTU.Core.Domain\PersonnelSTU.Core.Domain.csproj", "{2B46E1B6-72A3-4B5F-91BB-C274052D7AF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelSTU.Core.Data", "PersonnelSTU.Core.Data\PersonnelSTU.Core.Data.csproj", "{426BE18F-38E3-4D4A-B743-49C68491634D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonnelSTU.Core.Data", "PersonnelSTU.Core.Data\PersonnelSTU.Core.Data.csproj", "{426BE18F-38E3-4D4A-B743-49C68491634D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelSTU.Core.Data.Web.API", "PersonnelSTU.Core.Data.Web.API\PersonnelSTU.Core.Data.Web.API.csproj", "{D39A07AD-A429-4354-8680-9A9E702BEE0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonnelSTU.Core.Data.Web.API", "PersonnelSTU.Core.Data.Web.API\PersonnelSTU.Core.Data.Web.API.csproj", "{D39A07AD-A429-4354-8680-9A9E702BEE0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

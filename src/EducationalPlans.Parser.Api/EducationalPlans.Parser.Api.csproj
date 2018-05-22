@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,14 +43,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\HttpClientExtension.cs" />
+    <Compile Include="Models\Attributes\RouteAttribute.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\Faculty.cs" />
+    <Compile Include="Models\Group.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Specialty.cs" />
+    <Compile Include="Models\StudentState.cs" />
+    <Compile Include="Models\STUState.cs" />
+    <Compile Include="Models\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\ParserService.cs" />
+    <Compile Include="Services\PersonnelSTUService.cs" />
+    <Compile Include="Services\XmlFileParserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EducationalPlans.Domain\EducationalPlans.Domain.csproj">
       <Project>{224b040d-7251-46ec-833b-3f0d93f73a83}</Project>
       <Name>EducationalPlans.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
