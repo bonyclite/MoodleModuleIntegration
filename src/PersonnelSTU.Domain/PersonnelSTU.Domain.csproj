@@ -56,7 +56,6 @@
       <Project>{ae801ccf-ea57-446e-ade4-3c0ecc6ef32c}</Project>
       <Name>Common.Domain</Name>
     </ProjectReference>
-    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

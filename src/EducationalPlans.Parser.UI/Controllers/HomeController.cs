@@ -1,8 +1,6 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 
-using Microsoft.Extensions.Options;
-
 using Moodle3KL.Data.Repositories;
 using Moodle3KL.Domain;
 using PersonnelSTU.Data.Repositories;

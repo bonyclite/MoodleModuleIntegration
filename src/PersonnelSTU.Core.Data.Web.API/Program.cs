@@ -1,9 +1,14 @@
-﻿using Autofac.Extensions.DependencyInjection;
-
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
-namespace EducationalPlans.Parser.WebApi
+namespace PersonnelSTU.Core.Data.Web.API
 {
     public class Program
     {
@@ -14,9 +19,6 @@ namespace EducationalPlans.Parser.WebApi
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseKestrel()
-                .ConfigureServices(services => services.AddAutofac())
-                .UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
     }
