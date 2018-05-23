@@ -28,7 +28,6 @@ namespace EducationalPlans.Parser.Api.Services
         public async Task<IEnumerable<T>> Get<T>()
         {
             var route = typeof(T).GetCustomAttribute<RouteAttribute>().Route;
-
             var request = new HttpRequestMessage(HttpMethod.Get, $"api/PersonnelSTU/{route}");
 
             return await _httpClient.SendAsync<IEnumerable<T>>(request);
