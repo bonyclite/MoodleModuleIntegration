@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Linq.Expressions;
-using Common.Data.Infrastructure;
 using Common.Data.Repositories;
 using Moodle3KL.Data.Infrastructure;
 using Moodle3KL.Domain;
@@ -12,6 +11,7 @@ namespace Moodle3KL.Data.Repositories
     {
         TEntity GetById(long id);
         TResult GetById<TResult>(long id, Expression<Func<TEntity, TResult>> selector);
+        void Save(TEntity entity);
     }
 
     public class MdlEntityRepositoryBase<TEntity> : EntityRepositoryBase<TEntity>, IMdlEntityRepositoryBase<TEntity> where TEntity : mdl_entity_base
@@ -30,6 +30,14 @@ namespace Moodle3KL.Data.Repositories
             var result = GetMany(e => e.id == id, selector).Take(1).ToArray();
 
             return result.FirstOrDefault();
+        }
+
+        public void Save(TEntity entity)
+        {
+            if (entity == null)
+                throw new ArgumentNullException(nameof(entity));
+
+            Entities.Add(entity);
         }
     }
 }

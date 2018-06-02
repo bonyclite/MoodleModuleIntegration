@@ -10,11 +10,11 @@ namespace Common.Data.Infrastructure
         void Commit();
     }
 
-    public class UnitOfWork : IUnitOfWork
+    public abstract class UnitOfWork<TDbFactory> : IUnitOfWork where TDbFactory : IDbFactory
     {
         private readonly IDbContext _dbContext;
 
-        public UnitOfWork(IDbFactory databaseFactory)
+        protected UnitOfWork(TDbFactory databaseFactory)
         {
             _dbContext = databaseFactory.Get();
         }

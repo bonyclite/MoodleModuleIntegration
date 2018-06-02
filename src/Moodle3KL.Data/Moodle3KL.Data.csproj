@@ -76,6 +76,7 @@
     <Compile Include="Infrastructure\AppConfig.cs" />
     <Compile Include="Infrastructure\Moodle3KLDbContext.cs" />
     <Compile Include="Infrastructure\Moodle3KLDbFactory.cs" />
+    <Compile Include="Infrastructure\Moodle3KLUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\MdlEntityRepositoryBase.cs" />
   </ItemGroup>

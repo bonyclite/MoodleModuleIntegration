@@ -2,7 +2,6 @@
 using Autofac;
 using Autofac.Builder;
 using Common.Data;
-using Common.Data.Infrastructure;
 using Moodle3KL.Data.Infrastructure;
 using Moodle3KL.Data.Repositories;
 
@@ -14,6 +13,7 @@ namespace Moodle3KL.Data
             Func<IRegistrationBuilder<object, object, object>, IRegistrationBuilder<object, object, object>>
                 lifetimeScopeConfigurator)
         {
+            builder.RegisterType<Moodle3KLUnitOfWork>().As<IMoodle3KLUnitOfWork>().ApplyDefaultConfiguration(lifetimeScopeConfigurator);
             builder.RegisterType<Moodle3KLDbFactory>().As<IMoodle3KLDbFactory>().ApplyDefaultConfiguration(lifetimeScopeConfigurator);
             builder.RegisterGeneric(typeof(MdlEntityRepositoryBase<>)).As(typeof(IMdlEntityRepositoryBase<>)).ApplyDefaultConfiguration(lifetimeScopeConfigurator);
         }
