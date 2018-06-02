@@ -1,9 +1,5 @@
-﻿using System;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
+﻿using System.Web;
 using Autofac;
-using Autofac.Builder;
 using Autofac.Integration.Mvc;
 using Moodle3KL.Data;
 
@@ -17,15 +13,11 @@ namespace StudentCard.Web.UI.App
             new AppStart().Run();
         }
 
-        public AppStart(Func<IRegistrationBuilder<object, object, object>, IRegistrationBuilder<object, object, object>> lifetimeScopeConfigurator = null) : base(lifetimeScopeConfigurator)
-        {
-        }
-
         public override void RegisterTypes(ContainerBuilder builder)
         {
             base.RegisterTypes(builder);
 
-            Bootstrapper.RegisterTypes(builder, LifetimeScopeConfigurator);
+            Bootstrapper.RegisterTypes(builder);
             builder.RegisterControllers(typeof(AppStart).Assembly).PropertiesAutowired();
         }
 

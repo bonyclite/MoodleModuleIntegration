@@ -1,10 +1,7 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Web.Mvc;
-using System.Web.Optimization;
 using System.Web.Routing;
 using Autofac;
-using Autofac.Builder;
 using Autofac.Integration.Mvc;
 using Common;
 using Common.Data;
@@ -15,17 +12,6 @@ namespace Web.Common.App
     [SuppressMessage("ReSharper", "VirtualMemberNeverOverridden.Global")]
     public class AppStart
     {
-        public Func<IRegistrationBuilder<object, object, object>, IRegistrationBuilder<object, object, object>>
-            LifetimeScopeConfigurator { get; }
-
-        public AppStart(
-            Func<IRegistrationBuilder<object, object, object>, IRegistrationBuilder<object, object, object>>
-                lifetimeScopeConfigurator = null)
-        {
-            LifetimeScopeConfigurator = lifetimeScopeConfigurator ??
-                                        (registrationBuilder => registrationBuilder.InstancePerRequest());
-        }
-
         public virtual void Run()
         {
             var builder = new ContainerBuilder();
@@ -44,7 +30,7 @@ namespace Web.Common.App
 
         public virtual void RegisterTypes(ContainerBuilder builder)
         {
-            Bootstrapper.RegisterTypes(builder, LifetimeScopeConfigurator);
+            Bootstrapper.RegisterTypes(builder);
         }
 
         protected virtual void RegisterBundles()
