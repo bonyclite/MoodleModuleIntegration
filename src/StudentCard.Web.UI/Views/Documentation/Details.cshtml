@@ -1,0 +1,45 @@
+﻿@using StudentCard.Web.UI.Controllers
+@using Web.Common.App.Extensions
+
+@model StudentCard.Web.UI.Models.Documentation.Details.DocumentationDetailsModel
+
+<div class="alert alert-success" role="alert" style="display: none">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <span id="message"></span>
+</div>
+
+@using (Html.BeginForm<DocumentationController>(c => c.StudyDocument(Model.StudentId)))
+{
+    <a href="javascript:void(0)" id="study-doc-button" class="btn btn-link">Заказать справку об обучении</a>
+}
+
+<script>
+    $(function() {
+        $("#study-doc-button").click(function() {
+            var url = "@(Html.BuildUrlFromExpression<DocumentationController>(c => c.StudyDocument(Model.StudentId)))";
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                contentType: "application/json",
+                success: function (data) {
+                    showMessage("Справка об обучении успешно отправлена на обработку.");
+                },
+                error: function(data) {
+                    console.log(data);
+                }
+            });
+        });
+
+        function showMessage(message) {
+            $(".alert").show();
+            $("#message").text(message);
+
+            window.setTimeout(function() {
+                $(".alert").slideUp(500, function(){
+                    $(this).hide();
+                });
+            }, 3000);
+        }
+    });
+</script>

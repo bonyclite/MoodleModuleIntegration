@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using Common.Data.Infrastructure;
 using Common.Domain;
 
@@ -17,6 +15,7 @@ namespace Common.Data.Repositories
         IQueryable<TEntity> GetMany(Expression<Func<TEntity, bool>> where);
         IQueryable<TResult> GetMany<TResult>(Expression<Func<TEntity, bool>> where, Expression<Func<TEntity, TResult>> selector);
         TResult SingleOrDefault<TResult>(Expression<Func<TEntity, bool>> where, Expression<Func<TEntity, TResult>> selector);
+        TEntity FirstOrDefault(Expression<Func<TEntity, bool>> where);
     }
 
     public class EntityRepositoryBase<TEntity> : IEntityRepository<TEntity> where TEntity : class, IEntityBase
@@ -58,6 +57,11 @@ namespace Common.Data.Repositories
         public TResult SingleOrDefault<TResult>(Expression<Func<TEntity, bool>> @where, Expression<Func<TEntity, TResult>> selector)
         {
             return GetMany(where, selector).SingleOrDefault();
+        }
+
+        public TEntity FirstOrDefault(Expression<Func<TEntity, bool>> where)
+        {
+            return GetAll().FirstOrDefault(where);
         }
     }
 }

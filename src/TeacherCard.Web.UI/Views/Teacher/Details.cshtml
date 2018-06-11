@@ -1,0 +1,11 @@
+﻿@using TeacherCard.Web.UI.Controllers
+@using Web.Common.App.Extensions
+
+@model TeacherCard.Web.UI.Models.Teacher.Details.TeacherDetailsModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{ Html.RenderAction<DisciplineController>(c => c.List(Model.MdlUser)); }

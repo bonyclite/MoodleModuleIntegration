@@ -1,0 +1,22 @@
+﻿@using Microsoft.Web.Mvc
+@using TeacherCard.Web.UI.Controllers
+
+@model TeacherCard.Web.UI.Models.Discipline.List.DisciplineListModel
+
+<table class="table table-hover table-bordered table-borderless">
+    <thead>
+    <tr>
+        <th>Дисциплина</th>
+        <th>Действия</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Disciplines)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td><a class="btn btn-link" href="@(Html.BuildUrlFromExpression<StudentController>(c => c.ListWithAcademicDebts(item.ProgrammItemId)))">Посмотреть список должников</a></td>
+        </tr>
+    }
+    </tbody>
+</table>

@@ -22,6 +22,28 @@
 </head>
 <body>
     <div class="container body-content">
+        @{
+            var warningMessage = TempData["WarningMessage"];
+
+            if (warningMessage != null && $"{warningMessage}" != "")
+            {
+                <div class="alert alert-warning">@Html.Raw(warningMessage)</div>
+            }
+
+            var infoMessage = TempData["InfoMessage"];
+
+            if (infoMessage != null && $"{infoMessage}" != "")
+            {
+                <div class="alert alert-info">@Html.Raw(infoMessage)</div>
+            }
+
+            var tempDataMessage = TempData["message"];
+            if (tempDataMessage != null && $"{tempDataMessage}" != "")
+            {
+                <div class="alert alert-success">@Html.Raw(tempDataMessage)</div>
+            }
+        }
+        
         @RenderBody()
         <hr />
         <footer>

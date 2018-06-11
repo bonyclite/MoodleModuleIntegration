@@ -51,11 +51,13 @@
 
             var html = "";
 
+            var url = "@(Html.BuildUrlFromExpression<StudentCardController>(c => c.Details(0)))";
+
             for (var i = 0; i < persons.length; i++) {
                 var person = persons[i];
 
                 var fullName = person.lastname + " " + person.firstname + " " + person.middlename;
-                html += "<a href='javasript:void(0)' id='" +person.id + "' class='list-group-item list-group-item-action'>" + fullName + "</a>";
+                html += "<a href='" + url.replace(0, person.id) + "' id='" +person.id + "' class='list-group-item list-group-item-action'>" + fullName + "</a>";
             }
 
             return html;

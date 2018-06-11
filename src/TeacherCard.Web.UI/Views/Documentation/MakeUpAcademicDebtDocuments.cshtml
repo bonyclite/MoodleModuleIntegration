@@ -1,0 +1,65 @@
+﻿@using TeacherCard.Web.UI.Controllers
+@using Web.Common.App.Extensions
+@model TeacherCard.Web.UI.Models.Documentation.MakeUpAcademicDebts.DocumentationMakeUpAcademicDebtDocumentsModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Ведомости по дисциплине @Model.DisciplineName</h2>
+
+@using (Html.BeginForm<DocumentationController>(c => c.MakeUpAcademicDebtDocuments(null)))
+{
+    <input type="submit" value="Сохранить" class="btn btn-outline-secondary"/>
+
+    @Html.HiddenFor(m => m.ProgrammItemId)
+
+    <div class="row">
+        @foreach (var item in Model.AcademicDebtDocumentModels)
+        {
+            <table class="table table-hover table-bordered table-borderless">
+                <thead>
+                    <tr>
+                        <th>Ключ</th>
+                        <th>Значение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Студент</td>
+                        <td>@item.FullName</td>
+                        @Html.HiddenFor(m => m.AcademicDebtDocumentModels[Model.AcademicDebtDocumentModels.IndexOf(item)].Id)
+                    </tr>
+                    <tr>
+                        <td>Дисциплина</td>
+                        <td>@item.DisciplineModel.Name</td>
+                    </tr>
+                    <tr>
+                        <td>Группа</td>
+                        <td>@item.GroupName</td>
+                    </tr>
+                    <tr>
+                        <td>Дата</td>
+                        <td>@item.Date</td>
+                        @Html.HiddenFor(m => m.AcademicDebtDocumentModels[Model.AcademicDebtDocumentModels.IndexOf(item)].Date)
+                    </tr>
+                    <tr>
+                        <td>Оценка</td>
+                        <td>
+                            @if (item.Date < DateTime.UtcNow)
+                            {
+                                @Html.TextBoxFor(m => m.AcademicDebtDocumentModels[Model.AcademicDebtDocumentModels.IndexOf(item)].Mark, new { type = "number", disabled = "disabled", @class = "form-control" })
+                            }
+                            else
+                            {
+                                @Html.TextBoxFor(m => m.AcademicDebtDocumentModels[Model.AcademicDebtDocumentModels.IndexOf(item)].Mark, new { type = "number", @class = "form-control" })
+                            }
+                        </td>
+                        @Html.HiddenFor(m => m.AcademicDebtDocumentModels[Model.AcademicDebtDocumentModels.IndexOf(item)].GradeId)
+                    </tr>
+                </tbody>
+            </table>
+        }
+    </div>
+}

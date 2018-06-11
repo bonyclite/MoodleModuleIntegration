@@ -1,0 +1,27 @@
+﻿@using TeacherCard.Web.UI.Controllers
+@using Web.Common.App.Extensions
+
+@model TeacherCard.Web.UI.Models.Discipline.List.DisciplineListModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-hover table-bordered table-borderless">
+    <thead>
+        <tr>
+            <th>Дисциплина</th>
+            <th>Действия</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Disciplines)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td><a class="btn btn-link" href="@(Html.BuildUrlFromExpression<DocumentationController>(c => c.MakeUpAcademicDebtDocuments(item.ProgrammItemId)))">Посмотреть список активных ведомостей</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

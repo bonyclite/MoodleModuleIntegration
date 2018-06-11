@@ -1,0 +1,93 @@
+﻿@using DepartmentCard.Web.UI.Controllers
+@using Web.Common.App.Extensions
+
+@model DepartmentCard.Web.UI.Models.Documentation.CreateMakeUpAcademicDebtDocuments.CreateDocumentationMakeUpAcademicDebtDocumentsModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm<DocumentationController>(c => c.CreateMakeUpAcademicDebtDocuments(null)))
+{
+    <input type="submit" value="Сформировать ведомости" class="btn btn-outline-secondary" />
+
+    @Html.HiddenFor(m => m.ProgrammItemId)
+
+    <br />
+
+    var groups = Model.Students.GroupBy(s => new
+    {
+        s.GroupId,
+        s.GroupName
+    }).ToArray();
+
+    <div>
+        @foreach (var group in groups)
+        {
+            var groupId = $"group-{group.Key.GroupId}";
+            var headId = $"head-{group.Key.GroupId}";
+
+            <div class="card">
+                <div class="card-header" id="@headId">
+                    <h5 class="mb-0">
+                        <label>
+                            <input type="checkbox" class="student-group" data-group="@groupId" />
+                        </label>
+
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#@groupId" aria-expanded="false" aria-controls="@groupId">
+                            @group.Key.GroupName
+                        </button>
+                    </h5>
+                </div>
+                <div id="@groupId" class="collapse show" aria-labelledby="@headId">
+                    <div class="card-body">
+                        <table class="table table-hover table-bordered table-borderless">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Студент</th>
+                                    <th>Группа</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in group)
+                                {
+                                    var selectedListItem = new SelectListItem
+                                    {
+                                        Text = "",
+                                        Value = item.Id.ToString()
+                                    };
+
+                                    <tr>
+                                        <th>
+                                            <label>
+                                                <input type="checkbox"
+                                                       name="StudentIds"
+                                                       value="@selectedListItem.Value" />
+                                                @selectedListItem.Text
+                                            </label>
+                                        </th>
+                                        <td>@item.FullName</td>
+                                        <td>@item.GroupName</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<script>
+    $(function () {
+        $("input.student-group").change(function (e) {
+            var groupId = $(e.target).data("group");
+
+            var selector = "#" + groupId + " input[type='checkbox']";
+            $(selector).prop("checked", $(e.target).is(":checked"));
+        });
+    });
+</script>

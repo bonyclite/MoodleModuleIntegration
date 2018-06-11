@@ -117,6 +117,7 @@
     <EmbeddedResource Include="Content\fonts\fontawesome-webfont.woff" />
     <EmbeddedResource Include="Content\fonts\fontawesome-webfont.woff2" />
     <EmbeddedResource Include="Content\fonts\FontAwesome.otf" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <EmbeddedResource Include="Scripts\jquery-3.3.1.min.map" />
     <EmbeddedResource Include="Scripts\jquery-3.3.1.slim.min.map" />

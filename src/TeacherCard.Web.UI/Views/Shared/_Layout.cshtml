@@ -1,0 +1,70 @@
+﻿@using TeacherCard.Web.UI.Controllers
+@using Web.Common.App.Extensions
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link nav-link active" href="@(Html.BuildUrlFromExpression<TeacherController>(c => c.Details()))">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link active" href="@(Html.BuildUrlFromExpression<DocumentationController>(c => c.MakeUpAllAcademicDebtDocuments()))">Ведомости</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br />
+
+    <div class="container body-content">
+        @{
+            var infoMessage = TempData["InfoMessage"];
+            if (infoMessage != null && $"{infoMessage}" != "")
+            {
+                <div class="alert alert-info">@Html.Raw(infoMessage)</div>
+            }
+
+            var tempDataMessage = TempData["message"];
+            if (tempDataMessage != null && $"{tempDataMessage}" != "")
+            {
+                <div class="alert alert-success">@Html.Raw(tempDataMessage)</div>
+            }
+        }
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

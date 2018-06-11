@@ -879,6 +879,7 @@
     <Compile Include="mdl_lti_types_config.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="mdl_makeup_academicdebt.cs" />
     <Compile Include="mdl_message.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -1347,6 +1348,7 @@
     <Compile Include="mdl_stats_weekly.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="mdl_study_document.cs" />
     <Compile Include="mdl_subcourse.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Class Name="Moodle3KL.Data.Bootstrapper">
+    <Position X="4.25" Y="1" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Bootstrapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Moodle3KL.Data.Infrastructure.AppConfig">
+    <Position X="0.5" Y="1" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\AppConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Moodle3KL.Data.Infrastructure.Moodle3KLDbContext">
+    <Position X="2.75" Y="2.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Public" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>87//v/+/3r///83/++//9j/2//f98s///f//nff3/6M=</HashCode>
+      <FileName>Infrastructure\Moodle3KLDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Moodle3KL.Data.Infrastructure.Moodle3KLDbFactory">
+    <Position X="0.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\Moodle3KLDbFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Moodle3KL.Data.Repositories.MdlEntityRepositoryBase&lt;TEntity&gt;" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5.75" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repositories\MdlEntityRepositoryBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Moodle3KL.Data.Repositories.IMdlEntityRepositoryBase&lt;TEntity&gt;">
+    <Position X="0.5" Y="4" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Repositories\MdlEntityRepositoryBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

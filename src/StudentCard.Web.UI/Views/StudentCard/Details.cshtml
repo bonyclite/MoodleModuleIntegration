@@ -4,21 +4,36 @@
 
 @model StudentCardDetailsModel
 
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
 <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
         <a class="nav-link active" id="front-tab" data-toggle="tab" href="#front" role="tab" aria-controls="front" aria-selected="true">Лицевая часть</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#marks" role="tab" aria-controls="marks" aria-selected="false">Оценки</a>
+        <a class="nav-link" id="marks-tab" data-toggle="tab" href="#marks" role="tab" aria-controls="marks" aria-selected="false">Оценки</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="documentation-tab" data-toggle="tab" href="#documentation" role="tab" aria-controls="marks" aria-selected="false">Документация</a>
     </li>
 </ul>
+
+<br />
+
 <div class="tab-content">
     <div class="tab-pane fade show active" id="front" role="tabpanel" aria-labelledby="front-tab">
-        <br/>
+        <br />
         @{ Html.RenderAction<StudentCardController>(c => c.Front(Model.PersonId));}
     </div>
-    <div class="tab-pane fade" id="marks" role="tabpanel" aria-labelledby="profile-tab">
+    <div class="tab-pane fade" id="marks" role="tabpanel" aria-labelledby="marks-tab">
         <br />
         @{ Html.RenderAction<StudentCardController>(c => c.Marks(Model.PersonId)); }
+    </div>
+    <div class="tab-pane fade" id="documentation" role="tabpanel" aria-labelledby="documentation-tab">
+        <br />
+        @{ Html.RenderAction<DocumentationController>(c => c.Details(Model.PersonId)); }
     </div>
 </div>

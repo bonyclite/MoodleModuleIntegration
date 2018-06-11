@@ -169,16 +169,20 @@
     <Compile Include="App\BundleConfig.cs" />
     <Compile Include="App\FilterConfig.cs" />
     <Compile Include="App\RouteConfig.cs" />
+    <Compile Include="Controllers\DocumentationController.cs" />
     <Compile Include="Controllers\PersonsController.cs" />
     <Compile Include="Controllers\StudentCardController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Persons\List\PersonsListModel.cs" />
+    <Compile Include="Models\StudentCard\AcademicDebts\StudentCardAcademicDebtsModel.cs" />
+    <Compile Include="Models\StudentCard\AcademicDebts\StudentCardAcademicDebtsViewModel.cs" />
     <Compile Include="Models\StudentCard\Details\StudentCardDetailsModel.cs" />
     <Compile Include="Models\StudentCard\Front\StudentCardFrontModel.cs" />
     <Compile Include="Models\StudentCard\Marks\StudentCardMarksModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Documentation\Details\DocumentationDetailsModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -195,19 +199,24 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <Content Include="Views\StudentCard\Front.cshtml" />
     <Content Include="Views\StudentCard\Index.cshtml" />
     <Content Include="Views\Persons\List.cshtml" />
-    <Content Include="Views\StudentCard\Details.cshtml" />
     <Content Include="Views\StudentCard\Marks.cshtml" />
+    <Content Include="Views\StudentCard\Details.cshtml" />
+    <Content Include="Views\Documentation\Details.cshtml" />
+    <Content Include="Views\StudentCard\AcademicDebts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common.Data\Common.Data.csproj">

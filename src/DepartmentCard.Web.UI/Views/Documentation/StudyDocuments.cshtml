@@ -1,0 +1,34 @@
+﻿@using DepartmentCard.Web.UI.Controllers
+@using Web.Common.App.Extensions
+@model DepartmentCard.Web.UI.Models.Documentation.StudyDocuments.DocumentationStudyDocumentsViewModel
+
+@{
+    ViewBag.Title = "Справки об обучении";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Справки об обучении</h2>
+
+@using (Html.BeginForm<DocumentationController>(c => c.StudyDocuments(null)))
+{
+    <input type="submit" value="Одобрить" class="btn btn-outline-secondary" />
+
+    <br />
+    <div>
+        @foreach (var item in Model.Persons)
+        {
+            var selectedListItem = new SelectListItem()
+            {
+                Text = item.FullName,
+                Value = item.StudyDocumentId.ToString()
+            };
+
+            <label>
+                <input type="checkbox"
+                       name="SelectedIdStudyDocuments"
+                       value="@selectedListItem.Value" />
+                @selectedListItem.Text
+            </label>
+        }
+    </div>
+}

@@ -1,0 +1,74 @@
+﻿@model DepartmentCard.Web.UI.Models.Documentation.MakeUpAcademicDebtDocuments.DocumentationMakeUpAcademicDebtDocumentsModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("MakeUpAcademicDebtDocuments", "Documentation", FormMethod.Get))
+{
+    <div class="row">
+        <div class="form-horizontal col-md-4">
+            <input type="submit" value="Поиск" class="btn btn-outline-secondary" />
+
+            <p style="margin: 10px" />
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    @Html.CheckBoxFor(m => m.IsNew, new { @class = "form-check-input" })
+                    Новые
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    @Html.CheckBoxFor(m => m.IsDepartmentApproved, new { @class = "form-check-input" })
+                    Одобренные деканатом
+                </label>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.DisciplineModels)
+                @Html.DropDownListFor(m => m.ProgrammItemId, Model.DisciplineModels.Select(g => new SelectListItem()
+                {
+                    Text = g.Name,
+                    Value = g.Id.ToString()
+                }), new { @class = "form-control" })
+            </div>
+        </div>
+
+        @foreach (var item in Model.AcademicDebtDocumentModels)
+        {
+            <table class="table table-hover table-bordered table-borderless">
+                <thead>
+                    <tr>
+                        <th>Ключ</th>
+                        <th>Значение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Студент</td>
+                        <td>@item.FullName</td>
+                    </tr>
+                    <tr>
+                        <td>Дисциплина</td>
+                        <td>@item.DisciplineModel.Name</td>
+                    </tr>
+                <tr>
+                    <td>Группа</td>
+                    <td>@item.GroupName</td>
+                </tr>
+                <tr>
+                    <td>Дата</td>
+                    <td>@item.Date</td>
+                </tr>
+                    <tr>
+                        <td>Оценка</td>
+                        <td>@item.Mark</td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+    </div>
+}

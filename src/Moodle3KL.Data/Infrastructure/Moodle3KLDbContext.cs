@@ -13,6 +13,8 @@ namespace Moodle3KL.Data.Infrastructure
         {
         }
 
+        public virtual DbSet<mdl_makeup_academicdebt> mdl_makeup_academicdebt { get; set; }
+        public virtual DbSet<mdl_study_document> mdl_study_document { get; set; }
         public virtual DbSet<mdl_assign> mdl_assign { get; set; }
         public virtual DbSet<mdl_assign_grades> mdl_assign_grades { get; set; }
         public virtual DbSet<mdl_assign_plugin_config> mdl_assign_plugin_config { get; set; }

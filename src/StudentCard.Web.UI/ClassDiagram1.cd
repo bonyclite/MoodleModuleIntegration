@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="StudentCard.Web.UI.App.AppStart" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAABAEAAAAAAAAAAA=</HashCode>
+      <FileName>App\AppStart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentCard.Web.UI.App.BundleConfig" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App\BundleConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentCard.Web.UI.App.FilterConfig" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>App\FilterConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentCard.Web.UI.App.RouteConfig" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App\RouteConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentCard.Web.UI.Controllers.PersonsController">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Controllers\PersonsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentCard.Web.UI.Controllers.StudentCardController">
+    <Position X="8.5" Y="1" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAABkAABAAABAAQAAEAgAAAAAAAAAAAAAAcAAAAAAIA=</HashCode>
+      <FileName>Controllers\StudentCardController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentCard.Web.UI.MvcApplication" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentCard.Web.UI.Models.Persons.List.PersonsListModel" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\Persons\List\PersonsListModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentCard.Web.UI.Models.StudentCard.Details.StudentCardDetailsModel">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\StudentCard\Details\StudentCardDetailsModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentCard.Web.UI.Models.StudentCard.Front.StudentCardFrontModel" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\StudentCard\Front\StudentCardFrontModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentCard.Web.UI.Models.StudentCard.Front.StudentModel" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAEAAACAAAAAAAAAQQAAAAAAAAAAAAAAAAAAEAAg=</HashCode>
+      <FileName>Models\StudentCard\Front\StudentCardFrontModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentCard.Web.UI.Models.StudentCard.Marks.StudentCardMarksModel" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\StudentCard\Marks\StudentCardMarksModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentCard.Web.UI.Models.StudentCard.Marks.SemesterModel" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\StudentCard\Marks\StudentCardMarksModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentCard.Web.UI.Models.StudentCard.Marks.DisciplineModel" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAgAAQAAAAAAAAAAACAAAEAAAA=</HashCode>
+      <FileName>Models\StudentCard\Marks\StudentCardMarksModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

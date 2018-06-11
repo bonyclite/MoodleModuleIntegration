@@ -1,0 +1,100 @@
+﻿@using TeacherCard.Web.UI.Controllers
+@using Web.Common.App.Extensions
+
+@model TeacherCard.Web.UI.Models.Student.ListWithAcademicDebts.StudentListWithAcademicDebtsModel
+
+@{
+    ViewBag.Title = "Должники";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Должники по дисциплине @Model.DisciplineName</h2>
+
+@using (Html.BeginForm<StudentController>(c => c.ListWithAcademicDebts(null)))
+{
+    <input type="submit" value="Отправить запрос в деканат на получение ведомостей" class="btn btn-outline-secondary" />
+
+    <div class="form-group input-group-sm">
+        @Html.LabelFor(model => model.MakeUpAcademicDebtsDate)
+        @Html.TextBoxFor(model => model.MakeUpAcademicDebtsDate, new { @class = "form-control", type = "date" })
+        @Html.ValidationMessageFor(model => model.MakeUpAcademicDebtsDate)
+    </div>
+
+    @Html.HiddenFor(m => m.ProgrammItemId)
+
+    <br />
+
+    var groups = Model.Students.GroupBy(s => new
+    {
+        s.GroupId,
+        s.GroupName
+    }).ToArray();
+
+    <div>
+        @foreach (var group in groups)
+        {
+            var groupId = $"group-{group.Key.GroupId}";
+            var headId = $"head-{group.Key.GroupId}";
+
+            <div class="card">
+                <div class="card-header" id="@headId">
+                    <h5 class="mb-0">
+                        <label>
+                            <input type="checkbox" class="student-group" data-group="@groupId"/>
+                        </label>
+
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#@groupId" aria-expanded="false" aria-controls="@groupId">
+                            @group.Key.GroupName
+                        </button>
+                    </h5>
+                </div>
+                <div id="@groupId" class="collapse show" aria-labelledby="@headId">
+                    <div class="card-body">
+                        <table class="table table-hover table-bordered table-borderless">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Студент</th>
+                                    <th>Группа</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in group)
+                                {
+                                    var selectedListItem = new SelectListItem
+                                    {
+                                        Text = "",
+                                        Value = item.Id.ToString()
+                                    };
+
+                                    <tr>
+                                        <th>
+                                            <label>
+                                                <input type="checkbox"
+                                                       name="StudentIds"
+                                                       value="@selectedListItem.Value" />
+                                                @selectedListItem.Text
+                                            </label>
+                                        </th>
+                                        <td>@item.FullName</td>
+                                        <td>@item.GroupName</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<script>
+    $(function() {
+        $("input.student-group").change(function(e) {
+            var groupId = $(e.target).data("group");
+
+            var selector = "#" + groupId + " input[type='checkbox']";
+            $(selector).prop("checked", $(e.target).is(":checked"));
+        });    });
+</script>

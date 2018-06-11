@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Web.Common.App.AppStart">
+    <Position X="0.75" Y="8.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAABAEAAAAAAAAAAI=</HashCode>
+      <FileName>App\AppStart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Web.Common.App.BundleConfig">
+    <Position X="3" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App\BundleConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Web.Common.App.BundleNullOrderer" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="12" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App\BundleNullOrderer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Web.Common.App.EmbeddedCommonStyleBundle">
+    <Position X="6.5" Y="6" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App\EmbeddedResourceBundle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Web.Common.App.EmbeddedCommonScriptBundle">
+    <Position X="12.5" Y="5.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App\EmbeddedResourceBundle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Web.Common.App.EmbeddedStyleBundle">
+    <Position X="6.75" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App\EmbeddedResourceBundle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Web.Common.App.EmbeddedScriptBundle">
+    <Position X="12.75" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App\EmbeddedResourceBundle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Web.Common.App.EmbeddedResourceBundle">
+    <Position X="9.75" Y="1.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AABCAEAAQAAAAAAAAAAABAAAAAACAAAAAAAAAAAAGAA=</HashCode>
+      <FileName>App\EmbeddedResourceBundle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Web.Common.App.EmbeddedResourceVirtualFile">
+    <Position X="3" Y="12" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAEAAAIAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App\EmbeddedResourceBundle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Web.Common.App.Extensions.ControllerExtensions">
+    <Position X="0.75" Y="6.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAABAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>App\Extensions\ControllerExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Web.Common.App.Extensions.RequestExtensions">
+    <Position X="0.75" Y="4.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>App\Extensions\RequestExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Web.Common.App.Extensions.UrlHelper">
+    <Position X="3" Y="10" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABAAAEAAAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAAAA=</HashCode>
+      <FileName>App\Extensions\UrlHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Web.Common.UrlValidator">
+    <Position X="0.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UrlValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

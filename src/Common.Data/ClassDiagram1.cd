@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Class Name="Common.Data.Bootstrapper">
+    <Position X="9.5" Y="8" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Bootstrapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Common.Data.Infrastructure.DbContextAdapter" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="5.25" Width="5" />
+    <TypeIdentifier>
+      <HashCode>gQABAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Infrastructure\DbContextAdapter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Common.Data.Infrastructure.DbFactoryBase" BaseTypeListCollapsed="true">
+    <Position X="1.25" Y="9.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAABAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\DbFactoryBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="Common.Data.Infrastructure.UnitOfWork" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="9.5" Width="3" />
+    <AssociationLine Name="IDbFactory" Type="Common.Data.Infrastructure.IDbFactory" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="10.374" />
+        <Point X="4.375" Y="10.374" />
+        <Point X="4.375" Y="8.25" />
+        <Point X="3" Y="8.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAABAEAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\UnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IDbFactory" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Common.Data.Repositories.EntityRepositoryBase&lt;TEntity&gt;" BaseTypeListCollapsed="true">
+    <Position X="1" Y="14.25" Width="7.75" />
+    <AssociationLine Name="IDbFactory" Type="Common.Data.Infrastructure.IDbFactory" ManuallyRouted="true">
+      <Path>
+        <Point X="1" Y="15.701" />
+        <Point X="0.665" Y="15.701" />
+        <Point X="0.665" Y="8.302" />
+        <Point X="1.25" Y="8.302" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>oAAAAAAAAAAgAAAAAEAABAAAAAAAAAAAAgEAAAAAAAA=</HashCode>
+      <FileName>Repositories\EntityRepositoryBase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IDbFactory" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.255" />
+  </Class>
+  <Interface Name="Common.Data.Infrastructure.IDbContext">
+    <Position X="9.5" Y="3.25" Width="5" />
+    <TypeIdentifier>
+      <HashCode>gQAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Infrastructure\DbContextAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Common.Data.Infrastructure.IDbFactory">
+    <Position X="1.25" Y="7.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\DbFactoryBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Common.Data.Infrastructure.IUnitOfWork">
+    <Position X="5" Y="8" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\UnitOfWork.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Common.Data.Repositories.IEntityRepository&lt;TEntity&gt;">
+    <Position X="1" Y="11.75" Width="7.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAgAAAAAAAABAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\EntityRepositoryBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

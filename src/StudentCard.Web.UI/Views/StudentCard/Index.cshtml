@@ -6,20 +6,3 @@
 }
 
 @{ Html.RenderPartial("~/Views/Persons/List.cshtml");}
-
-<div id="studentCardPanel">
-
-</div>
-
-<script>
-    $(function() {
-        $("#person-container").click("a",
-            function(e) {
-                var id = $(e.target).attr("id");
-                $("#person-container").empty();
-
-                var url = "@(Html.BuildUrlFromExpression<StudentCardController>(c => c.Details(0)))";
-                $("#studentCardPanel").load(url.replace(0, id));
-            });
-    });
-</script>

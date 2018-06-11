@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Class Name="Common.EmbeddedResourceUtil">
+    <Position X="0.5" Y="6" Width="6.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgCAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EmbeddedResourceUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Common.ServiceLocator">
+    <Position X="0.5" Y="3.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAABAAAAAAAAAAQABAAAAAACAAAAAAAA=</HashCode>
+      <FileName>ServiceLocator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Common.Extensions.CollectionExtensions">
+    <Position X="0.5" Y="0.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Extensions\CollectionExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Common.Extensions.ObjectExtensions">
+    <Position X="0.5" Y="2" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions\ObjectExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Common.Extensions.ReflectionExtensions">
+    <Position X="0.5" Y="7.75" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Extensions\ReflectionExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Common.Extensions.StringExtensions">
+    <Position X="0.5" Y="9.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAgAAAAAAAAAAAAAAAAAAAAIBAAAAAAAAA=</HashCode>
+      <FileName>Extensions\StringExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
