@@ -1,17 +1,13 @@
 ﻿@using StudentCard.Web.UI.Controllers
 @using Web.Common.App.Extensions
-@model StudentCard.Web.UI.Models.StudentCard.AcademicDebts.StudentCardAcademicDebtsViewModel
 
-@{
-    ViewBag.Title = "title";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+@model StudentCard.Web.UI.Models.StudentCard.AcademicDebts.StudentCardAcademicDebtsViewModel
 
 @using (Html.BeginForm<StudentCardController>(c => c.AcademicDebts(null)))
 {
-    <input type="submit" value="Отправить" class="btn btn-outline-secondary" />
+    <input type="submit" value="Отправить запрос на пересдачу" class="btn btn-link" />
     <br />
-   
+
     <div>
         @foreach (var item in Model.Disciplines)
         {

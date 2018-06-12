@@ -20,6 +20,7 @@ namespace DepartmentCard.Web.UI.Controllers
         public IMdlEntityRepositoryBase<mdl_block_dof_s_programmitems> MdlBlockDofSProgrammitemsRepository { get; set; }
         public IMdlEntityRepositoryBase<mdl_grade_items> MdlGradeItemsRepository { get; set; }
         public IMdlEntityRepositoryBase<mdl_block_dof_s_cstreams> MdlBlockDofSCstreamsRepository { get; set; }
+        public IMdlEntityRepositoryBase<mdl_study_document> MdlStudyDocumentRepository { get; set; }
 
         [HttpGet]
         public ActionResult List()
@@ -56,6 +57,12 @@ namespace DepartmentCard.Web.UI.Controllers
                         $"на получение ведомостей для пересдачи дисцисцплины {programmitem.name} (дата {academicdebt.Key.date.Value:f})." +
                         $"<a href='{this.BuildUrlFromExpression<DocumentationController>(c => c.CreateMakeUpAcademicDebtDocuments(programmitem.id))}'>Перейдите по ссылке для формирования ведомостей</a>";
                 }
+            }
+
+            if (MdlStudyDocumentRepository.Any(e => e.departmentid == id && e.isnew && !e.isapproved))
+            {
+                TempData["Message"] += "Поступили новые запросы на получение справок об обучении. " +
+                    $"<a href='{this.BuildUrlFromExpression<DocumentationController>(c => c.StudyDocuments())}'>Посмотреть</a>";
             }
 
             return View();

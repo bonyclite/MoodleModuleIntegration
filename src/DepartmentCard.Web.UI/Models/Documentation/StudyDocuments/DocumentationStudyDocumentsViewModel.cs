@@ -4,6 +4,11 @@ namespace DepartmentCard.Web.UI.Models.Documentation.StudyDocuments
 {
     public class DocumentationStudyDocumentsViewModel
     {
-        public IEnumerable<PersonModel> Persons { get; set; }
+        public List<PersonModel> Persons { get; set; }
+
+        public DocumentationStudyDocumentsViewModel()
+        {
+            Persons = new List<PersonModel>();
+        }
     }
 }

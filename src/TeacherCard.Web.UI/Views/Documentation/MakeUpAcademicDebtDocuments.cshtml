@@ -47,7 +47,7 @@
                     <tr>
                         <td>Оценка</td>
                         <td>
-                            @if (item.Date < DateTime.UtcNow)
+                            @if (item.Date > DateTime.UtcNow)
                             {
                                 @Html.TextBoxFor(m => m.AcademicDebtDocumentModels[Model.AcademicDebtDocumentModels.IndexOf(item)].Mark, new { type = "number", disabled = "disabled", @class = "form-control" })
                             }

@@ -108,7 +108,7 @@ namespace TeacherCard.Web.UI.Controllers
             TempData["Message"] =
                 $"Заявка на пересдачу дисциплины {programmItem.name} успешно отправлена на обработку в деканат";
 
-            return RedirectToAction("List", "Discipline");
+            return RedirectToAction("ListWithAcademicDebts", "Student", new { disciplineId = model.ProgrammItemId });
         }
     }
 }

@@ -15,20 +15,41 @@
 
     <br />
     <div>
-        @foreach (var item in Model.Persons)
-        {
-            var selectedListItem = new SelectListItem()
-            {
-                Text = item.FullName,
-                Value = item.StudyDocumentId.ToString()
-            };
+        <table class="table table-hover table-bordered table-borderless">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Студент</th>
+                    <th>Группа</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Persons)
+                {
+                    var selectedListItem = new SelectListItem()
+                    {
+                        Text = item.FullName,
+                        Value = item.StudyDocumentId.ToString()
+                    };
 
-            <label>
-                <input type="checkbox"
-                       name="SelectedIdStudyDocuments"
-                       value="@selectedListItem.Value" />
-                @selectedListItem.Text
-            </label>
-        }
+                    <tr>
+                        <td>
+                            <label>
+                                <input type="checkbox"
+                                       name="SelectedIdStudyDocuments"
+                                       value="@selectedListItem.Value" />
+                                @selectedListItem.Text
+                            </label>
+                        </td>
+                        <td>
+                            @item.FullName
+                        </td>
+                        <td>
+                            @item.GroupName
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>
 }

@@ -26,27 +26,50 @@ namespace DepartmentCard.Web.UI.Controllers
         [HttpGet]
         public ActionResult StudyDocuments()
         {
+            var groups = MdlBlockDofSAgroupsRepository.GetMany(e => e.departmentid == Consts.DepartmentId)
+               .ToArray();
+
             var studyDocumentInfos =
-                MdlStudyDocumentRepository
-                    .GetMany(e => e.departmentid == Consts.DepartmentId && e.isnew && !e.isapproved,
-                        e => new
-                        {
-                            e.studentid,
-                            e.id
-                        })
+                    MdlStudyDocumentRepository
+                        .GetMany(e => e.departmentid == Consts.DepartmentId && e.isnew && !e.isapproved,
+                            e => new
+                            {
+                                e.studentid,
+                                e.id
+                            })
+                        .ToArray();
+
+            var model = new DocumentationStudyDocumentsViewModel();
+
+            foreach (var group in groups)
+            {
+                var programmsbcses = MdlBlockDofSProgrammsbcsRepository
+                    .GetMany(e => e.agroupid == group.id && e.status == "active", e => e.contractid).ToArray();
+
+                var studentIds = MdlBlockDofSContractsRepository
+                    .GetMany(e => programmsbcses.Contains(e.id), e => e.studentid)
                     .ToArray();
 
-            return View(new DocumentationStudyDocumentsViewModel
-            {
-                Persons = studyDocumentInfos.Select(s => MdlBlockDofSPersonsRepository.GetById(s.studentid, e => new PersonModel
+                foreach (var item in studyDocumentInfos)
                 {
-                    Id = e.id,
-                    LastName = e.lastname,
-                    MiddleName = e.middlename,
-                    FirstName = e.firstname,
-                    StudyDocumentId = s.id
-                }))
-            });
+                    if (studyDocumentInfos.Any(s => s.studentid == item.studentid))
+                    {
+                        model.Persons.Add(MdlBlockDofSPersonsRepository.GetById(item.studentid, e => new PersonModel
+                        {
+                            Id = e.id,
+                            LastName = e.lastname,
+                            MiddleName = e.middlename,
+                            FirstName = e.firstname,
+                            GroupName = group.name,
+                            GroupId = group.id
+                        }));
+
+                        model.Persons.Last().StudyDocumentId = item.id;
+                    }
+                }
+            }
+
+            return View(model);
         }
 
         [HttpPost]

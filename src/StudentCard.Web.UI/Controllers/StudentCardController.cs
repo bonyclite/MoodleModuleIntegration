@@ -77,14 +77,11 @@ namespace StudentCard.Web.UI.Controllers
                             var gradeItem = MdlGradeItemsRepository
                                 .FirstOrDefault(e => e.courseid == programmItem.mdlcourse && e.locktime < now && e.itemtype == "manual");
 
-                            if (gradeItem != null)
+                            if (gradeItem != null && !MdlMakeupAcademicdebtRepository.Any(e => e.gradeitemid == gradeItem.id && e.studentid == personId && !e.isnew && e.isteacherapproved && e.isdepartamentapproved))
                             {
-                                if (MdlMakeupAcademicdebtRepository.Any(e => e.studentid == student.id && e.gradeitemid == gradeItem.id && e.isnew))
-                                {
-                                    var course = MdlCourseRepository.GetById(gradeItem.courseid.Value);
-                                    TempData["WarningMessage"] +=
-                                        $"Вы имеете задолжность по {course.fullname}.<a href='{this.BuildUrlFromExpression(c => c.AcademicDebts(personId))}'>Нажмите для просмотра</a>";
-                                }
+                                var course = MdlCourseRepository.GetById(gradeItem.courseid.Value);
+                                TempData["WarningMessage"] +=
+                                    $"Вы имеете задолжность по {course.fullname}.<a href='javascript:void(0)' class='btn btn-link trip'>Нажмите для просмотра</a>";
                             }
                         }
                     }
@@ -178,7 +175,7 @@ namespace StudentCard.Web.UI.Controllers
                             if (gradeItem != null)
                             {
                                 var gradeses = MdlGradeGradesRepository.FirstOrDefault(e => e.itemid == gradeItem.id && e.userid == student.mdluser);
-                                mark = gradeses.finalgrade.ToString();
+                                mark = gradeses?.finalgrade.ToString();
                             }
 
                             semesterModel.Disciplines.Add(new DisciplineModel
@@ -199,7 +196,7 @@ namespace StudentCard.Web.UI.Controllers
             return PartialView("~/Views/StudentCard/Marks.cshtml", model);
         }
 
-        [HttpGet]
+        [ChildActionOnly]
         public ActionResult AcademicDebts(long studentId)
         {
             var now = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
@@ -247,7 +244,7 @@ namespace StudentCard.Web.UI.Controllers
                 }
             }
 
-            return View(model);
+            return PartialView(model);
         }
 
         [HttpPost]
