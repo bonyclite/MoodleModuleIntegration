@@ -3,28 +3,32 @@
 
 @model StudentCard.Web.UI.Models.StudentCard.AcademicDebts.StudentCardAcademicDebtsViewModel
 
-@using (Html.BeginForm<StudentCardController>(c => c.AcademicDebts(null)))
+@if (Model.Disciplines.Any())
 {
-    <input type="submit" value="Отправить запрос на пересдачу" class="btn btn-link" />
-    <br />
+    using (Html.BeginForm<StudentCardController>(c => c.AcademicDebts(null)))
+    {
+        <input type="submit" value="Отправить запрос на пересдачу" class="btn btn-link" />
+        <br />
 
-    <div>
-        @foreach (var item in Model.Disciplines)
-        {
-            var selectedListItem = new SelectListItem
+        <div>
+            @foreach (var item in Model.Disciplines)
             {
-                Text = item.DisciplineName,
-                Value = item.GradeItemId.ToString()
-            };
+                var selectedListItem = new SelectListItem
+                {
+                    Text = item.DisciplineName,
+                    Value = item.GradeItemId.ToString()
+                };
 
-            <label>
-                <input type="checkbox"
-                       name="GradeItemIds"
-                       value="@selectedListItem.Value" />
-                @selectedListItem.Text
-            </label>
-        }
-    </div>
+                <label>
+                    <input type="checkbox"
+                           name="GradeItemIds"
+                           value="@selectedListItem.Value" />
+                    @selectedListItem.Text
+                </label>
+            }
+        </div>
 
-    @Html.HiddenFor(m => m.StudentId)
+        @Html.HiddenFor(m => m.StudentId)
+    }
+
 }

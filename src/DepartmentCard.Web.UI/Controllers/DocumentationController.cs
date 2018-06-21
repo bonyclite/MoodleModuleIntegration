@@ -162,7 +162,7 @@ namespace DepartmentCard.Web.UI.Controllers
                 TempData["Message"] = $"Ведомости успешно созданы, вы можете посмотреть их <a href='{this.BuildUrlFromExpression(c => c.MakeUpAcademicDebtDocuments(true, true, model.ProgrammItemId))}'>здесь</a>";
             }
 
-            return RedirectToAction("CreateMakeUpAcademicDebtDocuments", new { disciplineId = model.ProgrammItemId });
+            return RedirectToAction("MakeUpAcademicDebtDocuments", new { isNew = true, isDepartmentApproved = true, programmItemId = model.ProgrammItemId });
         }
 
         [HttpGet]

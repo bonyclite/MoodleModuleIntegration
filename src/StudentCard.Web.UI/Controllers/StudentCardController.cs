@@ -77,8 +77,16 @@ namespace StudentCard.Web.UI.Controllers
                             var gradeItem = MdlGradeItemsRepository
                                 .FirstOrDefault(e => e.courseid == programmItem.mdlcourse && e.locktime < now && e.itemtype == "manual");
 
-                            if (gradeItem != null && !MdlMakeupAcademicdebtRepository.Any(e => e.gradeitemid == gradeItem.id && e.studentid == personId && !e.isnew && e.isteacherapproved && e.isdepartamentapproved))
+                            if (gradeItem != null)
                             {
+                                if (MdlMakeupAcademicdebtRepository.Any(e => e.gradeitemid == gradeItem.id && e.studentid == personId && !e.isnew && e.isteacherapproved && e.isdepartamentapproved))
+                                    continue;
+
+                                var gradeses = MdlGradeGradesRepository.FirstOrDefault(e => e.itemid == gradeItem.id && e.userid == student.mdluser);
+
+                                if (gradeses != null && gradeses.finalgrade != null)
+                                    continue;
+
                                 var course = MdlCourseRepository.GetById(gradeItem.courseid.Value);
                                 TempData["WarningMessage"] +=
                                     $"Вы имеете задолжность по {course.fullname}.<a href='javascript:void(0)' class='btn btn-link trip'>Нажмите для просмотра</a>";
@@ -232,12 +240,16 @@ namespace StudentCard.Web.UI.Controllers
                             foreach (var gradeItem in gradeItems)
                             {
                                 var course = MdlCourseRepository.GetById(gradeItem.courseid.Value);
+                                var gradeses = MdlGradeGradesRepository.FirstOrDefault(e => e.itemid == gradeItem.id && e.userid == student.mdluser);
 
-                                model.Disciplines.Add(new StudentCardAcademicDebtsViewModel.DisciplineModel
+                                if (gradeses.finalgrade == null)
                                 {
-                                    GradeItemId = gradeItem.id,
-                                    DisciplineName = course.fullname
-                                });
+                                    model.Disciplines.Add(new StudentCardAcademicDebtsViewModel.DisciplineModel
+                                    {
+                                        GradeItemId = gradeItem.id,
+                                        DisciplineName = course.fullname
+                                    });
+                                }
                             }
                         }
                     }

@@ -63,9 +63,9 @@ namespace TeacherCard.Web.UI.Controllers
                 .ToArray();
 
             var now = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-            var gradeItem = MdlGradeItemsRepository.FirstOrDefault(e =>
-                e.courseid == programmItem.mdlcourse && e.locktime < now && e.itemtype == "manual");
-            var gradeses = MdlGradeGradesRepository.GetMany(e => e.itemid == gradeItem.id).ToArray();
+
+            var gradeItem = MdlGradeItemsRepository.FirstOrDefault(e => e.locktime < now && e.itemtype == "manual");
+            var gradeses = MdlGradeGradesRepository.GetMany(e => e.itemid == 14).ToArray();
 
             foreach (var group in groups)
             {
