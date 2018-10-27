@@ -1,1 +1,1 @@
-# MoodleModuleIntegration
+# MoodleModuleIntegration.
